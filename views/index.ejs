@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 영역 -->
+    <%- include("common/header.ejs"); %>
+    <!-- 중간 영역 -->
+    <div id="container">
+        <!-- slide 영역 -->
+        <div class="slide_wrap">
+            <div class="slide">
+                <div class="view">
+                    <div class="slide_box">
+                        <div class="text_box">
+                            슬라이드 텍스트입니다<br>
+                            슬라이드 텍스트입니다<br>
+                            슬라이드 텍스트입니다
+                        </div>
+                    </div>
+                    <div class="slide_box">
+                        <div class="text_box">
+                            슬라이드 텍스트입니다2<br>
+                            슬라이드 텍스트입니다2<br>
+                            슬라이드 텍스트입니다2
+                        </div>
+                    </div>
+                    <div class="slide_box">
+                        <div class="text_box">
+                            슬라이드 텍스트입니다3<br>
+                            슬라이드 텍스트입니다3<br>
+                            슬라이드 텍스트입니다3
+                        </div>
+                    </div>
+                </div>
+                <div class="mouse_icon">
+                    <span class="material-symbols-outlined">mouse</span>
+                    <p class="text">scroll</p>
+                    <div class="scroll_bar"></div>
+                </div>
+                <div class="slide_btn_set">
+                    <a href=""><div class="slide_btn"></div></a>
+                    <a href=""><div class="slide_btn"></div></a>
+                    <a href=""><div class="slide_btn"></div></a>
+                </div>
+            </div>
+        </div>
+        <!-- menu_tab 영역 -->
+        <div class="menu_tab">
+            <div class="center">
+                <div class="menu_box">
+                    <h2 class="title">원하는 메뉴 선택</h2>
+                    <ul class="menus">
+                        <li><a class="on" href="#">메뉴1</a></li>
+                        <li><a href="#">메뉴2</a></li>
+                        <li><a href="#">메뉴3</a></li>
+                        <li><a href="#">메뉴4</a></li>
+                    </ul>
+                </div>
+                <div class="center_img_wrap">
+                    <!-- on 기능 -->
+                    <img class="center_img on" src="/img/test1.jpg" alt="">
+                    <img class="center_img" src="/img/test2.jpg" alt="">
+                    <img class="center_img" src="/img/test3.jpg" alt="">
+                    <img class="center_img" src="/img/test4.jpg" alt="">
+                </div>
+                <!-- on 기능 -->
+                <div class="left">
+                    <img class="left_img on" src="/img/test1.jpg" alt="">
+                    <img class="left_img" src="/img/test2.jpg" alt="">
+                    <img class="left_img" src="/img/test3.jpg" alt="">
+                    <img class="left_img" src="/img/test4.jpg" alt="">
+                </div>
+                <div class="right">
+                    <!-- on 기능 -->
+                    <div class="right_box on">
+                        <h3 class="menu_title">메뉴1</h3>
+                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/test1.jpg" alt="">
+                            <img class="menu_img" src="/img/test2.jpg" alt="">
+                            <img class="menu_img" src="/img/test3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">텍스트 공간입니다.</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <h3 class="menu_title">메뉴2</h3>
+                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/test1.jpg" alt="">
+                            <img class="menu_img" src="/img/test2.jpg" alt="">
+                            <img class="menu_img" src="/img/test3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">텍스트 공간입니다.</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <h3 class="menu_title">메뉴3</h3>
+                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/test1.jpg" alt="">
+                            <img class="menu_img" src="/img/test2.jpg" alt="">
+                            <img class="menu_img" src="/img/test3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">텍스트 공간입니다.</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <h3 class="menu_title">메뉴4</h3>
+                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/test1.jpg" alt="">
+                            <img class="menu_img" src="/img/test2.jpg" alt="">
+                            <img class="menu_img" src="/img/test3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">텍스트 공간입니다.</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- inner 영역 -->
+        <div class="inner">
+            <div class="inner_top">
+                첫번째 문단<br>
+                두번째 문단
+            </div>
+            <div class="inner_mid">
+                <img src="/img/test1.jpg" alt="">
+            </div>
+            <div class="inner_bot">
+                자동으로 흘러가는 띠
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="/js/menu_tab.js"></script>
+</body>
+</html>
