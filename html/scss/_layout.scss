@@ -220,4 +220,147 @@
             }
         }
     }
+    // inner 영역
+    .inner {
+        .inner_top {
+            padding: 120px 0;
+            background-color: orange;
+            text-align: center;
+            line-height: 17px;
+        }
+        .inner_mid {
+            width: 100%;
+            img {width: 100%; height: 740px;}
+        }
+        .inner_bot {
+            padding: 40px 0; background-color: coral;
+        }
+    }
+    // count 영역
+    .count {
+        display: flex;
+        background-color: bisque;
+        overflow: hidden;
+        > div {width: 50%;}
+        .left {
+            padding-left: 155px; box-sizing: border-box;
+            .title {
+                padding: 200px 0 50px;
+                font-size: 60px; line-height: 78px;
+            }
+            .text {
+                font-size: 19px; line-height: 28px;
+                padding-bottom: 135px;
+            }
+            .count_wrap {
+                padding: 40px 138px;
+                box-sizing: border-box;
+                border: 1px solid red;
+                margin-bottom: 50px;
+                .count_title {
+                    font-size: 20px; padding-bottom: 60px;
+                }
+                .count_box {
+                    font-size: 130px;
+                    span {font-size: 24px;}
+                }
+            }
+            .more {
+                display: block; background-color: orangered;
+                width: 195px; line-height: 60px; text-align: center;
+                border-radius: 30px; color: #fff;
+                font-size: 17px; margin-bottom: 195px;
+            }
+        }
+        .right {
+            display: flex; justify-content: flex-end;
+            align-items: center; position: relative;
+            .big_circle_line {
+                position: absolute; top: 15%; right: -40%;
+                width: 850px; height: 850px;
+                border: 1px dashed red;
+                box-sizing: border-box;
+                border-radius: 50%;
+                animation-name: big_circle;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes big_circle {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(-360deg);}
+            }
+            .small_circle_line {
+                position: absolute; top: 15%; right: -40%;
+                width: 850px; height: 850px;
+                // background-color: olivedrab;
+                box-sizing: border-box;
+                border-radius: 50%;
+                animation-name: smaill_circle;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                @keyframes smaill_circle {
+                    0% {transform: rotate(0deg);}
+                    100% {transform: rotate(360deg);}
+                }
+                .small_circle {
+                    position: absolute;
+                    left: 50%; bottom: -12px;
+                    width: 25px; height: 25px;
+                    border-radius: 50%;
+                    background-color: aqua;
+                }
+            }
+            .big_img {
+                width: 55%; height: 50%;
+                border-radius: 50%; margin-right: 90px;
+                z-index: 95;
+            }
+            .small_img {
+                width: 20%; height: 15%;
+                border-radius: 50%;
+                position: absolute;
+                right: 40px; top: 110px
+            }
+        }
+    }
+}
+// 하단 영역
+#footer {
+    display: flex; justify-content: center;
+    .center {
+        text-align: center;
+        .f_logo {
+            padding: 80px 0 40px;
+        }
+        .f_sns {
+            display: flex; justify-content: center;
+            li {margin: 0 17px 50px; font-size: 27px;}
+        }
+        > a {
+            display: block; color: #000;
+            font-weight: 600; margin-bottom: 55px;
+        }
+        .info {
+            text-align: center;
+            .wrap {
+                p {display: inline;}
+                .wrap_930 {display: inline;}
+            }
+            .bar {
+                &::after {
+                    content: ""; display: inline-block;
+                    width: 1px; height: 14px;
+                    background-color: red;
+                    position: relative;
+                    left: 3px; top: 1px;
+                    margin: 0 6px;
+                }
+            }
+        }
+        .copy {
+            padding: 120px 0 75px;
+        }
+    }
 }
