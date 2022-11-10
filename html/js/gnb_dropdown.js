@@ -7,9 +7,9 @@ const sub_menu_board = document.querySelector(".sub_menu_board");
 // gnb에 마우스를 올렸을 때 서브메뉴와 뒷배경이 나타남
 header.addEventListener("mouseenter",()=>{
     sub_menu.forEach((item,index)=>{
-        item.style.height = "260px";
+        item.style.height = "280px";
     });
-    sub_menu_board.style.height = "260px";
+    sub_menu_board.style.height = "280px";
 });
 
 header.addEventListener("mouseleave",()=>{

@@ -449,6 +449,101 @@ body {
   right: 40px;
   top: 110px;
 }
+#container .clothes_menu_wrap {
+  display: flex;
+  justify-content: center;
+  background-color: skyblue;
+}
+#container .clothes_menu_wrap .center {
+  width: 67%;
+}
+#container .clothes_menu_wrap .center .title {
+  padding: 110px 0 70px;
+  font-size: 50px;
+}
+#container .clothes_menu_wrap .center .menu_list {
+  display: flex;
+  justify-content: center;
+}
+#container .clothes_menu_wrap .center .menu_list li {
+  margin: 0 4% 100px;
+  font-size: 24px;
+  position: relative;
+}
+#container .clothes_menu_wrap .center .menu_list li::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  top: -13px;
+}
+#container .clothes_menu_wrap .center .menu_list li a {
+  color: gray;
+  transition: all 0.2s;
+}
+#container .clothes_menu_wrap .center .menu_list li.on::before {
+  background-color: coral;
+}
+#container .clothes_menu_wrap .center .menu_list li.on a {
+  color: coral;
+}
+#container .clothes_menu_wrap .center .list_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box {
+  width: 21%;
+  margin: 2%;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .img_wrap {
+  width: 100%;
+  height: 320px;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .img_wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box {
+  padding: 12px;
+  box-sizing: border-box;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .comp {
+  padding: 2px 0 10px;
+  font-size: 15px;
+  color: gray;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .name {
+  margin-bottom: 15px;
+  line-height: 21px;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .price_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .price_wrap .left {
+  display: flex;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .price_wrap .left .sale_price {
+  margin-right: 12px;
+  font-size: 21px;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .price_wrap .left .price {
+  position: relative;
+  top: 4px;
+  color: gray;
+}
+#container .clothes_menu_wrap .center .list_wrap .list_box .text_box .price_wrap .left .price::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
 
 #footer {
   display: flex;
@@ -496,4 +591,21 @@ body {
 }
 #footer .center .copy {
   padding: 120px 0 75px;
+}
+
+#admin_prd_page .prd_list_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#admin_prd_page .prd_list_wrap .prd_box {
+  width: 17%;
+  margin: 1%;
+  border: 1px solid orangered;
+}
+#admin_prd_page .prd_list_wrap .prd_box img {
+  width: 100%;
+  height: 300px;
+}
+#admin_prd_page > form {
+  margin: 50px 0;
 }

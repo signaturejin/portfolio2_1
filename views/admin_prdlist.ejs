@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 상품관리페이지</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="admin_prd_page">
+        <div class="prd_list_wrap">
+            <% for(let i=0; i<prdData.length; i++){ %>
+            <div class="prd_box">
+                <img class="file_img" src="/upload/<%- prdData[i].prd_file %>" alt="">
+                <h3 class="num"><%- prdData[i].prd_no %></h3>
+                <p class="name"><%- prdData[i].prd_name %></p>
+                <p class="comp"><%- prdData[i].prd_comp %></p>
+                <p class="price"><%- prdData[i].prd_price %></p>
+                <p class="sale_price"><%- prdData[i].prd_sale_price %></p>
+                <p class="percent"><%- prdData[i].prd_percent %></p>
+                <p class="category"><%- prdData[i].prd_category %></p>
+            </div>
+            <% } %>
+        </div>
+        <form action="/add/prdlist" method="post" enctype="multipart/form-data">
+            <p>상품등록하기</p>
+            <label for="prd_name">상품이름</label>
+            <input type="text" name="prd_name" class="prd_name">
+
+            <label for="prd_comp">상품회사</label>
+            <input type="text" name="prd_comp" class="prd_comp">
+
+            <label for="prd_img">상품이미지</label>
+            <input type="file" name="prd_img" class="prd_img">
+
+            <label for="prd_price">상품가격</label>
+            <input type="text" name="prd_price" class="prd_price">
+
+            <label for="prd_sale_price">상품세일가격</label>
+            <input type="text" name="prd_sale_price" class="prd_sale_price">
+
+            <label for="prd_percent">상품할인률</label>
+            <input type="text" name="prd_percent" class="prd_percent">
+
+            <label for="prd_category">상품분류</label>
+            <select name="prd_category" class="prd_category">
+                <option value="상의">상의</option>
+                <option value="아우터">아우터</option>
+                <option value="하의">하의</option>
+                <option value="신발">신발</option>
+                <option value="모자">모자</option>
+            </select>
+
+            <button type="submit">상품등록하기</button>
+        </form>
+    </div>
+</body>
+</html>

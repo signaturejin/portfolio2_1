@@ -7,13 +7,7 @@
     <title>메인페이지</title>
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- 아이콘 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <!-- 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <%- include("common/icon_font.ejs") %>
 </head>
 <body>
     <!-- 상단 영역 -->
@@ -254,7 +248,9 @@
             <div class="right">
                 <div class="notice_box">
                     <p>event</p>
-                    <h3 class="notice_title">[new event] 오늘의 새로운 이벤트</h3>
+                    <h3 class="notice_title">[new event] 오늘의 새로운 이벤트1</h3>
+                    <h3 class="notice_title">[new event] 오늘의 새로운 이벤트2</h3>
+                    <h3 class="notice_title">[new event] 오늘의 새로운 이벤트3</h3>
                 </div>
             </div>
         </div>
@@ -262,6 +258,6 @@
     <!-- 하단 영역 -->
     <%- include("common/footer.ejs"); %>
     <!-- js -->
-    <script src="/js/menu_tab.js"></script>
+    <script src="/js/main_menu_tab.js"></script>
 </body>
 </html>

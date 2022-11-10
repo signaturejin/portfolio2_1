@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품목록페이지</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include("common/icon_font.ejs") %>
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <div class="clothes_menu_wrap">
+            <div class="center">
+                <h2 class="title">카테고리</h2>
+                <ul class="menu_list">
+                    <li class="on"><a href="/menu/top">상의</a></li>
+                    <li><a href="/menu/outer">아우터</a></li>
+                    <li><a href="/menu/bottom">하의</a></li>
+                    <li><a href="/menu/shoes">신발</a></li>
+                    <li><a href="/menu/cap">모자</a></li>
+                </ul>
+                <div class="list_wrap">
+                    <% for(let i=0; i<prdData.length; i++){ %>
+                    <div class="list_box">
+                        <div class="img_wrap">
+                            <img src="/upload/<%- prdData[i].prd_file %>" alt="">
+                        </div>
+                        <div class="text_box">
+                            <p class="comp"><%- prdData[i].prd_comp %></p>
+                            <p class="name"><%- prdData[i].prd_name %></p>
+                            <div class="price_wrap">
+                                <div class="left">
+                                    <p class="sale_price"><%- prdData[i].prd_sale_price %></p>
+                                    <p class="price"><%- prdData[i].prd_price %></p>
+                                </div>
+                                <div class="right">
+                                    <p class="percent"><%- prdData[i].prd_percent %><span>%</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="/js/sub_menu_list.js"></script>
+</body>
+</html>
