@@ -239,6 +239,7 @@ body {
 }
 #container .menu_tab .center .left {
   position: relative;
+  background-image: url(/img/test1.jpg);
 }
 #container .menu_tab .center .left .left_img {
   position: absolute;
@@ -435,19 +436,60 @@ body {
   background-color: aqua;
 }
 #container .count .right .big_img {
-  width: 55%;
-  height: 50%;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  margin-right: 90px;
+  margin-right: 150px;
   z-index: 95;
 }
 #container .count .right .small_img {
-  width: 20%;
-  height: 15%;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
   right: 40px;
   top: 110px;
+}
+#container .notice {
+  display: flex;
+  justify-content: center;
+}
+#container .notice .center {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+#container .notice .center > .left {
+  width: 40%;
+  border-right: 1px solid #000;
+}
+#container .notice .center .right {
+  width: 60%;
+}
+#container .notice .center .right .notice_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: coral;
+  border-bottom: 1px solid #000;
+}
+#container .notice .center .right .notice_box:last-child {
+  border: none;
+}
+#container .notice .center .right .notice_box .left {
+  padding: 50px 55px;
+}
+#container .notice .center .right .notice_box .left .event {
+  padding-bottom: 15px;
+}
+#container .notice .center .right .notice_box .left .notice_title {
+  padding-bottom: 25px;
+}
+#container .notice .center .right .notice_box .right {
+  text-align: right;
 }
 #container .clothes_menu_wrap {
   display: flex;
