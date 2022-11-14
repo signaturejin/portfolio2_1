@@ -24,28 +24,31 @@
                 <div class="list_wrap">
                     <% for(let i=0; i<prdData.length; i++){ %>
                     <div class="list_box">
-                        <div class="img_wrap">
-                            <img src="/upload/<%- prdData[i].prd_file %>" alt="">
-                        </div>
-                        <div class="text_box">
-                            <p class="comp"><%- prdData[i].prd_comp %></p>
-                            <p class="name"><%- prdData[i].prd_name %></p>
-                            <div class="price_wrap">
-                                <div class="left">
-                                    <p class="sale_price"><%- prdData[i].prd_sale_price %></p>
-                                    <p class="price"><%- prdData[i].prd_price %></p>
-                                </div>
-                                <div class="right">
-                                    <p class="percent"><%- prdData[i].prd_percent %><span>%</span></p>
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="/upload/<%- prdData[i].prd_file %>" alt="">
+                            </div>
+                            <div class="text_box">
+                                <p class="comp"><%- prdData[i].prd_comp %></p>
+                                <p class="name"><%- prdData[i].prd_name %></p>
+                                <div class="price_wrap">
+                                    <div class="left">
+                                        <p class="sale_price"><%- prdData[i].prd_sale_price %></p>
+                                        <p class="price"><%- prdData[i].prd_price %></p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="percent"><%- prdData[i].prd_percent %><span>%</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <% } %>
                 </div>
             </div>
         </div>
     </div>
+    <%- include("common/footer.ejs"); %>
     <!-- js -->
     <script src="/js/sub_menu_list.js"></script>
 </body>

@@ -15,6 +15,7 @@ const session = require('express-session');
 
 //파일업로드 라이브러리 multer
 const multer  = require('multer');
+const { render } = require("ejs");
 
 // express함수를 app에 대입
 const app = express();
@@ -154,7 +155,7 @@ app.post("/add/login",passport.authenticate('local', {failureRedirect : '/fail'}
 // 관리자 상품관리페이지 경로 요청
 app.get("/admin/prdlist",(req,res)=>{
     db.collection("prdlist").find().toArray((err,f_result)=>{
-        res.render("admin_prdlist",{prdData: f_result});
+        res.render("admin_prdlist",{prdData: f_result}, {adminData :req.user});
     });
 });
 
@@ -178,7 +179,7 @@ app.post("/add/prdlist",upload.single('prd_img'),(req,res)=>{
             // 회사
             prd_comp: req.body.prd_comp,
             // 이미지
-            // form태그에  enctype="multipart/form-data"가 있어야 정상적으로 파일이 첨부됨
+            // form태그에 enctype="multipart/form-data"가 있어야 정상적으로 파일이 첨부됨
             prd_file: prd_file,
             // 원가
             prd_price: req.body.prd_price,
@@ -194,4 +195,86 @@ app.post("/add/prdlist",upload.single('prd_img'),(req,res)=>{
             });
         });
     });
+});
+
+// 관리자 매장관리페이지 경로 요청
+app.get("/admin/storelist",(req,res)=>{
+    db.collection("storelist").find().toArray((err,f_result)=>{
+        res.render("admin_store", {storeData: f_result}, {adminData :req.user});
+    });
+});
+
+// db에 매장관련데이터 보내기
+app.post("/add/storelist",(req,res)=>{
+    db.collection("count").findOne({name:"매장등록"},(err,f_result)=>{
+        db.collection("storelist").insertOne({
+            // 매장번호
+            store_no: f_result.storeCount + 1,
+            // 매장명
+            store_name: req.body.store_name,
+            // 매장 시/도
+            store_city: req.body.store_city,
+            // 매장 구/군
+            store_zone: req.body.store_zone,
+            // 매장 우편번호
+            store_post_num: req.body.store_post_num,
+            // 매장 주소
+            store_addr: req.body.store_addr,
+            // 매장 번호
+            store_tell: req.body.store_tell
+        },(err,i_result)=>{
+            db.collection("count").updateOne({name:"매장등록"},{$inc:{storeCount:1}},(err,u_result)=>{
+                res.redirect("/admin/storelist");
+            });
+        });
+    });
+});
+
+// 쇼핑몰 매장 지점 경로 요청
+app.get("/store/map",(req,res)=>{
+    db.collection("storelist").find().toArray((err,f_result)=>{
+        res.render("shop_store_map",{storeData: f_result});
+    });
+});
+
+// 매장주소 검색기능
+app.get("/store/addr_search",(req,res)=>{
+    // 시/도만 검색했을 시
+    if(req.query.store_city !== "" && req.query.store_zone === ""){
+        db.collection("storelist").find({store_city: req.query.store_city}).toArray((err,f_result)=>{
+            res.render("shop_store_map", {storeData: f_result});
+        });
+    }
+    // 시/도 & 구/군 둘 다 검색했을 시
+    else if(req.query.store_city !== "" && req.query.store_zone !== ""){
+        db.collection("storelist").find({store_city: req.query.store_city, store_zone:req.query.store_zone}).toArray((err,f_result)=>{
+            res.render("shop_store_map", {storeData: f_result});
+        });
+    }
+    // 둘 다 선택하지 않았을 시
+    else {
+        res.redirect("/store/map");
+    }
+});
+
+// 매장명 검색기능
+app.get("/store/name_search",(req,res)=>{
+    let store_search = [
+        {
+            $search: {
+                index: 'store_search',
+                text: {
+                    // 내가 입력한 이 값으로
+                    query: req.query.store_name,
+                    // db에 있는 store_name의 값에서 같은 단어가 포함되어있는 것 찾아옴
+                    path: "store_name"
+                }
+            }
+        }
+    ]
+
+    db.collection("storelist").aggregate(store_search).toArray((err,a_result)=>{
+        res.render("shop_store_map", {storeData: a_result});
+    });
+
 });

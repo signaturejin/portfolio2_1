@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 지점</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 웹폰트 및 아이콘 -->
+    <%- include("common/icon_font.ejs") %>
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <div class="store_map_wrap">
+            <div class="center">
+                <h2 class="title">매장안내</h2>
+                <div class="store_search">
+                    <div class="left">
+                        <!-- <img class="map_img mi1" src="/img/map_img1.jpg" alt="">
+                        <img class="map_img mi2" src="/img/map_img2.jpg" alt="">
+                        <img class="map_img mi3" src="/img/map_img3.jpg" alt=""> -->
+                        <img class="map_img mi4" src="/img/map_img4.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <!-- 검색기능 넣기 -->
+                        <!-- 매장 주소로 검색 -->
+                        <div class="store_addr_search_wrap">
+                            <p>매장주소로 검색하기</p>
+                            <form action="/store/addr_search" method="get" id="store_addr_search">
+                                <select name="store_city" id="store_city">
+                                    <option value>시/도 선택</option>
+                                </select>
+                                <select name="store_zone" id="store_zone">
+                                    <option value>구/군 선택</option>
+                                </select>
+                                <button id="addr_search_btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                        <!-- 매장명으로 검색 -->
+                        <div class="store_name_search_wrap">
+                            <p>매장명으로 검색하기</p>
+                            <form action="/store/name_search" method="get" id="store_name_search">
+                                <input type="text" name="store_name" class="store_name">
+                                <button id="name_search_btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="store_map_list">
+                    <div class="h_line">
+                        <div class="name">매장명</div>
+                        <div class="addr">매장주소</div>
+                        <div class="tell">전화번호</div>
+                    </div>
+                    <% if(storeData == 0){ %>
+                    <div class="line">
+                        <div class="no_data">매장 검색 결과가 없습니다.</div>
+                    </div>
+                    <% } %>
+                    <% for(let i=0; i<storeData.length; i++){ %>
+                    <div class="line">
+                        <div class="name"><%- storeData[i].store_name %></div>
+                        <div class="addr"><%- storeData[i].store_addr %></div>
+                        <div class="tell"><%- storeData[i].store_tell %></div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("common/footer.ejs"); %>
+    <!-- js -->
+    <script src="/js/hangjungdong.js"></script>
+    <script src="/js/store_address.js"></script>
+</body>
+</html>
