@@ -294,8 +294,8 @@
                     font-size: 20px; padding-bottom: 60px;
                 }
                 .count_box {
-                    font-size: 130px;
-                    span {font-size: 24px;}
+                    font-size: 20px;
+                    display: flex; align-items: center;
                 }
             }
             .more {
@@ -423,27 +423,39 @@
                 display: flex; flex-wrap: wrap;
                 .list_box {
                     width: 21%; margin: 2%;
-                    .img_wrap {
-                        width: 100%; height: 320px;
-                        img {width: 100%; height: 100%; border-radius: 25px;}
-                    }
-                    .text_box {
-                        padding: 12px; box-sizing: border-box;
-                        .comp {padding: 2px 0 10px; font-size: 15px; color: gray;}
-                        .name {margin-bottom: 15px; line-height: 21px;}
-                        .price_wrap {
-                            display: flex; justify-content: space-between;
-                            .left {
-                                display: flex;
-                                .sale_price {
-                                    margin-right: 12px; font-size: 21px;
+                    > a {
+                        color: #fff;
+                        .img_wrap {
+                            width: 100%; height: 320px;
+                            img {width: 100%; height: 100%; border-radius: 25px;}
+                        }
+                        .text_box {
+                            padding: 12px; box-sizing: border-box;
+                            .comp {padding: 2px 0 10px; font-size: 15px;}
+                            .name {margin-bottom: 15px; line-height: 21px;}
+                            .price_wrap {
+                                display: flex; justify-content: space-between;
+                                .left {
+                                    display: flex;
+                                    .sale_price {
+                                        margin-right: 12px; font-size: 21px;
+                                        span {padding-left: 1px;}
+                                    }
+                                    .price {
+                                        position: relative; top: 4px; color: gray;
+                                        &::after {
+                                            content: ""; width: 100%; height: 1px;
+                                            background-color: gray; position: absolute;
+                                            left: 0; top: 9px;
+                                        }
+                                        span {padding-left: 1px;}
+                                    }
                                 }
-                                .price {
-                                    position: relative; top: 4px; color: gray;
-                                    &::after {
-                                        content: ""; width: 100%; height: 1px;
-                                        background-color: gray; position: absolute;
-                                        left: 0; top: 9px;
+                                .right {
+                                    .percent {
+                                        color: #ff8a28; position: relative;
+                                        top: 4px;
+                                        span {padding-left: 1px;}
                                     }
                                 }
                             }

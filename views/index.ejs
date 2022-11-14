@@ -57,29 +57,29 @@
         <div class="menu_tab">
             <div class="center">
                 <div class="menu_box">
-                    <h2 class="title">원하는 메뉴 선택</h2>
+                    <h2 class="title">인기 많은 브랜드</h2>
                     <ul class="menus">
-                        <li><a class="on" href="#">메뉴1</a></li>
-                        <li><a href="#">메뉴2</a></li>
-                        <li><a href="#">메뉴3</a></li>
-                        <li><a href="#">메뉴4</a></li>
+                        <li><a class="on" href="#">엠엘비</a></li>
+                        <li><a href="#">리</a></li>
+                        <li><a href="#">커버낫</a></li>
+                        <li><a href="#">예일</a></li>
                     </ul>
                 </div>
                 <div class="center_img_wrap">
                     <!-- on 기능 -->
-                    <img class="center_img on" src="/img/test1.jpg" alt="">
-                    <img class="center_img" src="/img/test2.jpg" alt="">
-                    <img class="center_img" src="/img/test3.jpg" alt="">
-                    <img class="center_img" src="/img/test4.jpg" alt="">
+                    <img class="center_img on" src="/img/tab_img1.jpg" alt="">
+                    <img class="center_img" src="/img/tab_img2.jpg" alt="">
+                    <img class="center_img" src="/img/tab_img3.jpg" alt="">
+                    <img class="center_img" src="/img/tab_img1.jpg" alt="">
                 </div>
                 <!-- on 기능 -->
                 <div class="left">
                     <!-- left바탕 -->
                     <div class="left_bg"></div>
-                    <img class="left_img on" src="/img/test1.jpg" alt="">
-                    <img class="left_img" src="/img/test2.jpg" alt="">
-                    <img class="left_img" src="/img/test3.jpg" alt="">
-                    <img class="left_img" src="/img/test4.jpg" alt="">
+                    <img class="left_img on" src="/img/tab_img1.jpg" alt="">
+                    <img class="left_img" src="/img/tab_img2.jpg" alt="">
+                    <img class="left_img" src="/img/tab_img3.jpg" alt="">
+                    <img class="left_img" src="/img/tab_img4.jpg" alt="">
                 </div>
                 <div class="right">
                     <!-- on 기능 -->
@@ -229,7 +229,27 @@
                 </p>
                 <div class="count_wrap">
                     <p class="count_title">남은 시간</p>
-                    <p class="count_box">00:00:00</p>
+                    <div class="count_box">
+                        <div class="count_view">
+                            <!-- <p class="count_text">일</p> -->
+                            <p class="count_num">00</p>
+                        </div>
+                        <span>:</span>
+                        <div class="count_view">
+                            <!-- <p class="count_text">시</p> -->
+                            <p class="count_num">00</p>
+                        </div>
+                        <span>:</span>
+                        <div class="count_view">
+                            <!-- <p class="count_text">분</p> -->
+                            <p class="count_num">00</p>
+                        </div>
+                        <span>:</span>
+                        <div class="count_view">
+                            <!-- <p class="count_text">초</p> -->
+                            <p class="count_num">00</p>
+                        </div>
+                    </div>
                 </div>
                 <a class="more" href="#">쇼핑하러가기</a>
             </div>
@@ -288,5 +308,6 @@
     <%- include("common/footer.ejs"); %>
     <!-- js -->
     <script src="/js/main_menu_tab.js"></script>
+    <script src="/js/count_down.js"></script>
 </body>
 </html>
