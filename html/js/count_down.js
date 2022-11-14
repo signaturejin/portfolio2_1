@@ -13,7 +13,7 @@ let count_down = setInterval(()=>{
     let date = new Date();
 
     //목표시간을 변수에 대입
-    let target_day_date = new Date("2022-11-14 17:30:23");
+    let target_day_date = new Date("2022-11-18 18:30:00");
 
     //현재시간을 변수에 대입 (밀리세컨드로 보여줌)
     let today = date.getTime();
