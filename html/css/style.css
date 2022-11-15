@@ -345,7 +345,7 @@ body {
   height: 100%;
   transition: all 0.5s;
   display: none;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 #container .menu_tab .center .center_img_wrap .center_img.on {
   display: block;
@@ -389,6 +389,9 @@ body {
   height: 190px;
   margin: 0 2% 130px 0;
 }
+#container .menu_tab .center .right .right_box .menu_img_wrap .menu_img.covernat {
+  width: 40%;
+}
 #container .menu_tab .center .right .right_box .menu_title {
   font-size: 25px;
   margin-bottom: 37px;
@@ -423,6 +426,12 @@ body {
 }
 #container .menu_tab .center .right .right_box .right_bot .bot_box_wrap .bot_box .text {
   font-size: 16px;
+}
+#container .menu_tab .center .right .right_box .right_bot .bot_box_wrap .bot_box.covernat {
+  width: 23%;
+}
+#container .menu_tab .center .right .right_box .right_bot .bot_box_wrap .bot_box.yale {
+  width: 19%;
 }
 #container .menu_tab .center .right .right_box.on {
   display: block;

@@ -297,7 +297,7 @@
                     width: 100%; height: 100%;
                     transition: all 0.5s;
                     display: none;
-                    border-radius: 50px;
+                    border-radius: 20px;
                 }
                 .center_img.on {display: block;}
             }
@@ -333,6 +333,9 @@
                             width: 31%; height: 190px;
                             margin: 0 2% 130px 0;
                         }
+                        .menu_img.covernat {
+                            width: 40%;
+                        }
                     }
                     .menu_title {
                         font-size: 25px; margin-bottom: 37px;
@@ -360,6 +363,8 @@
                                 }
                                 .text {font-size: 16px;}
                             }
+                            .bot_box.covernat {width: 23%;}
+                            .bot_box.yale {width: 19%;}
                         }
                     }
                 }
