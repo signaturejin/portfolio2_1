@@ -12,19 +12,19 @@
 </head>
 <body>
     <!-- 상단 영역 -->
-    <%- include("common/header.ejs"); %>
+    <%- include("common/header.ejs",{change:"main", logo:"logo_white.png"}); %>
     <!-- 중간 영역 -->
     <div id="container">
         <!-- slide 영역 -->
-        <!-- opacity / z-index / positon 이용하여 구현 -->
+        <!-- 자동함수 사용하여 자동기능수행 -->
         <div class="slide_wrap">
             <div class="slide">
                 <div class="view">
                     <div class="slide_box">
                         <div class="text_box">
-                            슬라이드 텍스트입니다<br>
-                            슬라이드 텍스트입니다<br>
-                            슬라이드 텍스트입니다
+                            슬라이드 텍스트입니다1<br>
+                            슬라이드 텍스트입니다1<br>
+                            슬라이드 텍스트입니다1
                         </div>
                     </div>
                     <div class="slide_box">
@@ -43,22 +43,27 @@
                     </div>
                 </div>
                 <div class="mouse_icon">
-                    <span class="material-symbols-outlined">mouse</span>
+                    <!-- <span class="material-symbols-outlined">mouse</span> -->
+                    <div class="mouse_wrap">
+                        <div class="mouse">
+                            <div class="mouse_wheel"></div>
+                        </div>
+                    </div>
                     <p class="text">scroll</p>
                     <div class="scroll_bar"></div>
                 </div>
-                <div class="slide_btn_set">
-                    <a href=""><div class="slide_btn"></div></a>
-                    <a href=""><div class="slide_btn"></div></a>
-                    <a href=""><div class="slide_btn"></div></a>
-                </div>
+                <ul class="slide_btn_set">
+                    <li class="slide_btn on"><a href="#"></a></li>
+                    <li class="slide_btn"><a href="#"></a></li>
+                    <li class="slide_btn"><a href="#"></a></li>
+                </ul>
             </div>
         </div>
         <!-- menu_tab 영역 -->
         <div class="menu_tab">
             <div class="center">
                 <div class="menu_box">
-                    <h2 class="title">인기 많은 브랜드</h2>
+                    <h2 class="title">매거진</h2>
                     <ul class="menus">
                         <li><a class="on" href="#">MLB</a></li>
                         <li><a href="#">LEE</a></li>
@@ -68,10 +73,10 @@
                 </div>
                 <div class="center_img_wrap">
                     <!-- on 기능 -->
-                    <img class="center_img on" src="/img/tab_img1.jpg" alt="">
-                    <img class="center_img" src="/img/tab_img2.jpg" alt="">
-                    <img class="center_img" src="/img/tab_img3.jpg" alt="">
-                    <img class="center_img" src="/img/tab_img1.jpg" alt="">
+                    <img class="center_img on" src="/img/center_img1.jpg" alt="">
+                    <img class="center_img" src="/img/center_img2.jpg" alt="">
+                    <img class="center_img" src="/img/center_img3.jpg" alt="">
+                    <img class="center_img" src="/img/center_img4.jpg" alt="">
                 </div>
                 <!-- on 기능 -->
                 <div class="left">
@@ -85,12 +90,72 @@
                 <div class="right">
                     <!-- on 기능 -->
                     <div class="right_box on">
-                        <h3 class="menu_title">메뉴1</h3>
-                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <h3 class="menu_title">MLB</h3>
+                        <p class="text">Young Generation의 패션 아이콘<br>스트릿 캐주얼 브랜드</p>
                         <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/test1.jpg" alt="">
-                            <img class="menu_img" src="/img/test2.jpg" alt="">
-                            <img class="menu_img" src="/img/test3.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img1-1.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img1-2.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img1-3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">믹스 매치 아이템</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_img1-1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <h3 class="menu_title">LEE</h3>
+                        <p class="text">전통적으로 견고함과 실용성을 강조한<br>130년 역사를 지닌 브랜드</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/menu_img2-1.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img2-2.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img2-3.jpg" alt="">
+                        </div>
+                        <div class="right_bot">
+                            <p class="bot_title">믹스 매치 아이템</p>
+                            <div class="bot_box_wrap">
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트1</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트2</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트3</p>
+                                </div>
+                                <div class="bot_box">
+                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
+                                    <p class="text">텍스트4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <h3 class="menu_title">COVERNAT</h3>
+                        <p class="text">빈티지웨어에서 얻은 모티브를 현대적인 소재와<br>룩으로 푸는 컨템퍼러리 브랜드</p>
+                        <div class="menu_img_wrap">
+                            <img class="menu_img" src="/img/menu_img3-1.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img3-2.jpg" alt="">
+                            <img class="menu_img" src="/img/menu_img3-3.jpg" alt="">
                         </div>
                         <div class="right_bot">
                             <p class="bot_title">텍스트 공간입니다.</p>
@@ -115,68 +180,8 @@
                         </div>
                     </div>
                     <div class="right_box">
-                        <h3 class="menu_title">메뉴2</h3>
-                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/test1.jpg" alt="">
-                            <img class="menu_img" src="/img/test2.jpg" alt="">
-                            <img class="menu_img" src="/img/test3.jpg" alt="">
-                        </div>
-                        <div class="right_bot">
-                            <p class="bot_title">텍스트 공간입니다.</p>
-                            <div class="bot_box_wrap">
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트1</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트2</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트3</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트4</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right_box">
-                        <h3 class="menu_title">메뉴3</h3>
-                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/test1.jpg" alt="">
-                            <img class="menu_img" src="/img/test2.jpg" alt="">
-                            <img class="menu_img" src="/img/test3.jpg" alt="">
-                        </div>
-                        <div class="right_bot">
-                            <p class="bot_title">텍스트 공간입니다.</p>
-                            <div class="bot_box_wrap">
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트1</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트2</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트3</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/test1.jpg" alt="">
-                                    <p class="text">텍스트4</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right_box">
-                        <h3 class="menu_title">메뉴4</h3>
-                        <p class="text">설명란 텍스트 공간입니다.<br>텍스트 공간입니다.</p>
+                        <h3 class="menu_title">YALE</h3>
+                        <p class="text">미국 명문 사립대학의 시그니처 패션을<br>선보이는 빈티지웨어 브랜드</p>
                         <div class="menu_img_wrap">
                             <img class="menu_img" src="/img/test1.jpg" alt="">
                             <img class="menu_img" src="/img/test2.jpg" alt="">
@@ -210,20 +215,19 @@
         <!-- inner 영역 -->
         <div class="inner">
             <div class="inner_top">
-                첫번째 문단<br>
-                두번째 문단
+                쇼핑은 언제나 즐거운 시간
             </div>
             <div class="inner_mid">
                 <img src="/img/test1.jpg" alt="">
             </div>
-            <div class="inner_bot">
+            <!-- <div class="inner_bot">
                 자동으로 흘러가는 띠
-            </div>
+            </div> -->
         </div>
         <!-- count 영역 -->
         <div class="count">
             <div class="left">
-                <h2 class="title">어쩌구 쇼핑몰<br>블랙프라이데이</h2>
+                <h2 class="title">무엇이든 쇼핑몰<br>블랙프라이데이</h2>
                 <p class="text">
                     최대 80%까지 세일하는 파격적인 세일기간이 시작되었습니다!<br>
                     이 기간동안의 수익은 전액 기부됩니다.
@@ -232,23 +236,23 @@
                     <p class="count_title">남은 시간</p>
                     <div class="count_box">
                         <div class="count_view">
-                            <!-- <p class="count_text">일</p> -->
                             <p class="count_num">00</p>
+                            <p class="count_text">일</p>
                         </div>
                         <span>:</span>
                         <div class="count_view">
-                            <!-- <p class="count_text">시</p> -->
                             <p class="count_num">00</p>
+                            <p class="count_text">시</p>
                         </div>
                         <span>:</span>
                         <div class="count_view">
-                            <!-- <p class="count_text">분</p> -->
                             <p class="count_num">00</p>
+                            <p class="count_text">분</p>
                         </div>
                         <span>:</span>
                         <div class="count_view">
-                            <!-- <p class="count_text">초</p> -->
                             <p class="count_num">00</p>
+                            <p class="count_text">초</p>
                         </div>
                     </div>
                 </div>
@@ -306,8 +310,9 @@
         </div>
     </div>
     <!-- 하단 영역 -->
-    <%- include("common/footer.ejs"); %>
+    <%- include("common/footer.ejs",{change:"black_ver", logo:"logo_white.png"}); %>
     <!-- js -->
+    <script src="/js/slide_fade.js"></script>
     <script src="/js/main_menu_tab.js"></script>
     <script src="/js/count_down.js"></script>
 </body>

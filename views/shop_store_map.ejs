@@ -11,7 +11,7 @@
     <%- include("common/icon_font.ejs") %>
 </head>
 <body>
-    <%- include("common/header.ejs"); %>
+    <%- include("common/header.ejs",{change:"notmain", logo:"logo_black.png"}); %>
     <div id="container">
         <div class="store_map_wrap">
             <div class="center">
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-    <%- include("common/footer.ejs"); %>
+    <%- include("common/footer.ejs",{change:"white_ver", logo:"logo_black.png"}); %>
     <!-- js -->
     <script src="/js/hangjungdong.js"></script>
     <script src="/js/store_address.js"></script>

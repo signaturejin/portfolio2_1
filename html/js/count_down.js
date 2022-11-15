@@ -1,6 +1,6 @@
 //필요한 태그 생성
 const count_view = document.querySelectorAll(".count_view .count_num");
-console.log(count_view);
+
 //일 / 시 /분 / 초를 표현하는 계산식
 const seconds = 1000;
 const minutes = seconds * 60;
@@ -13,7 +13,7 @@ let count_down = setInterval(()=>{
     let date = new Date();
 
     //목표시간을 변수에 대입
-    let target_day_date = new Date("2022-11-18 18:Compress JPEG30:00");
+    let target_day_date = new Date("2022-11-18 18:30:00");
 
     //현재시간을 변수에 대입 (밀리세컨드로 보여줌)
     let today = date.getTime();

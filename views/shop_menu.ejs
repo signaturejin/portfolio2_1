@@ -9,13 +9,13 @@
     <%- include("common/icon_font.ejs") %>
 </head>
 <body>
-    <%- include("common/header.ejs"); %>
+    <%- include("common/header.ejs",{change:"notmain", logo:"logo_black.png"}); %>
     <div id="container">
         <div class="clothes_menu_wrap">
             <div class="center">
                 <h2 class="title">카테고리</h2>
                 <ul class="menu_list">
-                    <li class="on"><a href="/menu/top">상의</a></li>
+                    <li><a href="/menu/top">상의</a></li>
                     <li><a href="/menu/outer">아우터</a></li>
                     <li><a href="/menu/bottom">하의</a></li>
                     <li><a href="/menu/shoes">신발</a></li>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <%- include("common/footer.ejs"); %>
+    <%- include("common/footer.ejs",{change:"white_ver", logo:"logo_black.png"}); %>
     <!-- js -->
     <script src="/js/sub_menu_list.js"></script>
 </body>
