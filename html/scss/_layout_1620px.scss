@@ -1,0 +1,23 @@
+@media screen and (max-width:1620px) {
+    // 상단 영역
+    #header {
+        .center {
+            width: 93%;
+            .logo {
+                a {
+                    img {
+                        width: 150px; height: 30px;
+                        position: relative; bottom: 4px;
+                    }
+                }
+            }
+            .gnb {
+                margin-left: 0;
+                > li {
+                    line-height: 100px;
+                    > a {width: 160px;}
+                }
+            }
+        }
+    }
+}

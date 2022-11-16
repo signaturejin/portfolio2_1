@@ -19,19 +19,3 @@ slide_btn.forEach((item,index)=>{
         item.classList.add("on");
     });
 });
-
-//자동함수 기능 사용
-// let auto_slide = setInterval(()=>{
-//     slide_btn.forEach((item,index)=>{
-//         //활성화 전 전부 비활성화
-//         slide_box.forEach((item,index)=>{
-//             item.style.opacity = "0";
-//             item.style.zIndex = "2";
-//             slide_btn[index].classList.remove("on");
-//         });
-//         // 활성화
-//         slide_box[index].style.opacity = "1";
-//         slide_box[index].style.zIndex = "3";
-//         item.classList.add("on");
-//     });
-// },2000);

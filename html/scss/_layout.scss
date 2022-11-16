@@ -96,8 +96,100 @@
                     }
                 }
             }
-            .mobile_menu {
-                display: none;
+        }
+        .mobile_menu {
+            display: none; width: 35px; cursor: pointer;
+            .bar {
+                width: 100%; height: 2px;
+                margin: 8px 0;
+                background-color: #fff;
+                transition: all 0.5s;
+            }
+        }
+        .mobile_menu.close {
+            .bar {
+                position: relative;
+                &:nth-child(1) {transform: rotate(45deg); top: 10px;}
+                &:nth-child(2) {transform: translate(50px); opacity: 0;}
+                &:nth-child(3) {transform: rotate(-45deg); bottom: 10px;}
+            }
+        }
+        .mobile_board {
+            width: 500px; height: 100vh;    
+            position: absolute; top: 0; right: -100%;
+            background-color: #000;
+            transition: all 0.5s;
+            .close_btn {
+                padding: 30px 0 50px 430px;
+                width: 35px;
+                position: relative;
+                .wrap {
+                    height: 20px; cursor: pointer;
+                    .bar {
+                        width: 100%; height: 2px; margin: 8px 0;
+                        background-color: #fff; position: relative;
+                        &:nth-child(1) {transform: rotate(45deg); top: 5px;}
+                        &:nth-child(2) {transform: rotate(-45deg); bottom: 5px;}
+                    }
+                }
+            }
+            .mobile_gnb {
+                > li {
+                    width: 80%; padding-left: 30px;
+                    margin-bottom: 50px;
+                    > a {
+                        color: #fff; font-size: 22px;
+                        i {margin-left: 5px;}
+                    }
+                    .mobile_sub_menu {
+                        height: 0; overflow-y: scroll;
+                        transition: all 0.5s;
+                        margin-top: 28px;
+                        background-color: #fff;
+                        li {
+                            line-height: 55px;
+                            padding-left: 12px;
+                            a {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .sns {
+                display: flex; padding-left: 20px;
+                margin-bottom: 40px;
+                li {
+                    font-size: 25px;
+                    margin: 0 2px;
+                    a {
+                        i {
+                            color: #fff;
+                            width: 50px; line-height: 50px;
+                            text-align: center;
+                            border-radius: 50%;
+                            transition: all 0.3s;
+                            &:hover {
+                                background-color: #fff;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            > a {
+                display: block; margin-left: 30px;
+                color: #fff;
+                width: 140px;
+                line-height: 40px;
+                text-align: center;
+                border: 2px solid #ff8a28;
+                border-radius: 20px;
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                    font-weight: 500;
+                }
             }
         }
     }
@@ -178,7 +270,7 @@
                     &:nth-child(1) {
                         background-image: url("/img/slide1.jpg");
                         opacity: 1; z-index: 3;
-                        .text_box { right: 21%; top: 20%;}
+                        .text_box { right: 14%; top: 20%;}
                     }
                     &:nth-child(2) {
                         background-image: url("/img/slide2.jpg");
@@ -192,9 +284,10 @@
                         .text_box {left: 115px; top: 50px;}
                     }
                     .text_box {
-                        position: absolute;
-                        font-size: 38px;
-                        line-height: 50px;
+                        position: absolute; font-size: 58px;
+                        line-height: 70px; font-weight: 500;
+                        color: #fff;
+                        text-shadow: 0 1px 5px rgba(0,0,0,0.7);
                     }
                 }
             }
@@ -218,17 +311,21 @@
                         .mouse_wheel {
                             position: absolute; left: 50%; top: 5px;
                             transform: translateX(-50%);
-                            width: 8px; height: 10px;
-                            border-radius: 10px; background-color: #000;
-                            // animation: name duration timing-function delay iteration-count direction fill-mode;
-                            // animation-name: ani_mouse_wheel;
-                            // animation-duration: 3s;
-                            // animation-iteration-count: infinite;
+                            width: 10px; height: 10px;
+                            transition:all 0.5s;
+                            border-radius: 5px; background-color: #000;
                         }
-                        // @keyframes ani_mouse_wheel {
-                        //     50% {height: 20px;}
-                        //     100% {height: 10px;}
-                        // }
+                        .mouse_wheel.top{
+                            height:23px;
+                            top:5px;
+                            bottom:unset;
+                        }
+                        .mouse_wheel.bot{
+                            height:10px;
+                            top:unset;
+                            bottom:23px;
+                            opacity:0;
+                        }
                     }
                 }
                 .text {margin-bottom: 12px;}
@@ -303,9 +400,6 @@
             }
             .left {
                 position: relative;
-                // background-color: orange;
-                // width: 100%;
-                // height: 100%;
                 background-image: url(/img/left_bg.jpg);
                 .left_img {
                     position: absolute; left: 0; top: 0;
@@ -347,9 +441,10 @@
                     }
                     .right_bot {
                         .bot_title {
-                            font-size: 23px; padding-bottom: 13px;
-                            border-bottom: 1px solid red;
-                            margin-bottom: 30px;
+                            font-size: 22px; padding-bottom: 13px;
+                            border-bottom: 2px solid #ff8a28;
+                            margin-bottom: 30px; font-weight: 600;
+                            color: #ff8a28; 
                         }
                         .bot_box_wrap {
                             display: flex;
@@ -381,6 +476,28 @@
             text-align: center;
             line-height: 60px;font-weight: 600;
             font-size: 50px;
+            word-spacing: -9px;
+            .mg {margin-right: 10px;}
+            span.ani_start {
+                position: relative;
+                animation-name: text_wave;
+                animation-duration: .7s;
+                &:nth-child(2){animation-delay: 0.1s;}
+                &:nth-child(3){animation-delay: 0.2s;}
+                &:nth-child(4){animation-delay: 0.3s;}
+                &:nth-child(5){animation-delay: 0.4s;}
+                &:nth-child(6){animation-delay: 0.5s;}
+                &:nth-child(7){animation-delay: 0.6s;}
+                &:nth-child(8){animation-delay: 0.7s;}
+                &:nth-child(9){animation-delay: 0.8s;}
+                &:nth-child(10){animation-delay: 0.9s;}
+                &:nth-child(11){animation-delay: 1.0s;}
+            }
+            @keyframes text_wave {
+                0% {top: 0;}
+                35% {top: -20px;}
+                100% {top: 0;}
+            }
         }
         .inner_mid {
             width: 100%;
@@ -441,6 +558,11 @@
                 width: 195px; line-height: 60px; text-align: center;
                 border-radius: 30px; color: #fff;
                 font-size: 17px; margin-bottom: 195px;
+                transition: all 0.5s;
+                &:hover {
+                    background-color: #fff; color: #000;
+                    font-weight: 500;
+                }
             }
         }
         .right {
@@ -502,11 +624,20 @@
         .center {
             width: 100%;
             display: flex; justify-content: space-between;
-            border-top: 3px solid #000;
-            // border-bottom: 3px solid #000;
+            border-top: 1px solid #000;
             > .left {
                 width: 40%;
-                border-right: 3px solid #000;
+                border-right: 1px solid #cbcbcb;
+                .title {
+                    text-transform: uppercase;
+                    font-size: 75px;
+                    padding: 50px;
+                    .text {
+                        &:nth-child(2) {
+                            padding-left: 122px;
+                        }
+                    } 
+                }
             }
             .right {
                 width: 60%;
@@ -515,20 +646,37 @@
                     align-items: center;
                     // background-color: #000;
                     background-color: #fff;
-                    border-bottom: 3px solid #000;
+                    border-bottom: 1px solid #cbcbcb;
                     &:last-child {border: none;}
                     .left {
                         padding: 50px 55px;
+                        width: 60%;
                         .event {
                             padding-bottom: 15px;
+                            color: #ff8a28;
                         }
                         .notice_title {
-                            padding-bottom: 25px;
+                            a {
+                                display: block;
+                                padding-bottom: 25px;
+                                color: #000;
+                            }
                         }
-                        // .event_date {
-                        // }
+                        .event_date {
+                            color: #959595;
+                        }
                     }
-                    .right {text-align: right;}
+                    .right {
+                        text-align: right;
+                        width: 40%;
+                        a {
+                            color: #000;
+                            i {
+                                font-size: 25px;
+                                padding-right: 50px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -612,7 +760,7 @@
             .store_search {
                 display: flex; align-items: center;
                 justify-content: center;
-                margin-bottom: 50px;
+                margin-bottom: 100px;
                 > div {width: 50%;}
                 .left {
                     .map_img {width: 100%; height: 800px;}
@@ -630,25 +778,31 @@
                     padding-left: 50px;
                     .store_addr_search_wrap, .store_name_search_wrap {
                         font-size: 20px;
-                        > p {padding-bottom: 20px;}
+                        > p {padding-bottom: 20px; font-weight: 500;}
                         #store_addr_search, #store_name_search {
                             > select {
                                 width: 140px; height: 35px;
                                 border-radius: 10px; padding-left: 5px;
                                 margin-bottom: 50px;
+                                border: 2px solid #ff8a28;
                                 &:first-child {margin-right: 8px;}
                             }
                             > input {
                                 width: 288px; height: 35px;
                                 border-radius: 10px; padding-left: 5px;
-                                border: 1px solid #000;
+                                border: 2px solid #ff8a28;
                             }
                             #addr_search_btn,#name_search_btn {
                                 width: 35px; line-height: 35px;
-                                background-color: orange;
+                                background-color: #ff8a28;
+                                color: #fff;
                                 border: none; border-radius: 10px;
                                 cursor: pointer;
                                 margin-left: 10px;
+                                > i {
+                                    position: relative; top: 3px;
+                                    font-size: 21px;
+                                }
                             }
                         }
                     }
@@ -656,18 +810,25 @@
             }
             .store_map_list {
                 padding-bottom: 300px;
+                h3 {
+                    padding-bottom: 40px; font-size: 33px;
+                    color: #ff8a28;
+                }
                 .h_line {
                     display: flex;
-                    border-top: 2px solid red;
-                    border-bottom: 2px solid red;
+                    border-top: 1px solid #cbcbcb;
+                    border-bottom: 1px solid #cbcbcb;
+                    font-weight: 500; font-size: 17px;
+                    color: #121212;
                 }
                 .line {
                     display: flex;
                     // background-color: salmon;
-                    border-bottom: 1px solid red;
+                    border-bottom: 1px solid #cbcbcb;
+                    color: #121212;
                 }
                 .h_line,.line {
-                    line-height: 50px;
+                    line-height: 55px;
                     text-align: center;
                     .name {width: 20%;}
                     .addr {width: 50%;}
@@ -799,5 +960,19 @@
                 }
             }
         }
+    }
+}
+
+//맨 위로 가는 태그 영역
+#go_top {
+    position: fixed; right: 20px; bottom: 20px;
+    background-color: #fff;
+    width: 50px; line-height: 50px;
+    border-radius: 50%; text-align: center;
+    z-index: 99;
+    cursor: pointer;
+    i {
+        position: relative; top: 5px;
+        font-size: 28px; color: #000;
     }
 }

@@ -1,0 +1,104 @@
+@media screen and (max-width: 1200px) {
+    // 상단 영역
+    #header {
+        .center {
+            width: 93%;
+            .logo {
+                a {
+                    img {
+                        width: 150px; height: 30px;
+                        position: relative; bottom: 4px;
+                    }
+                }
+            }
+            .gnb {
+                > li {
+                    line-height: 100px;
+                    > a {width: 100px;}
+                }
+            }
+        }
+    }
+    
+    // 중간 영역
+    #container {
+        //메인페이지 slide 영역
+        .slide_wrap {
+            .slide {
+                .view {
+                    height: 650px;
+                    .slide_box {
+                        &:nth-child(1) {
+                            .text_box { right: 9%; top: 20%;}
+                        }
+                        &:nth-child(2) {
+                            .text_box {
+                                left: 50%; top: 80px;
+                                transform: translateX(-50%);
+                            }
+                        }
+                        &:nth-child(3) {
+                            .text_box {left: 115px; top: 50px;}
+                        }
+                        .text_box {font-size: 42px; line-height: 50px;}
+                    }
+                }
+            }
+        }
+        //메인페이지 menu_tab 영역
+        .menu_tab {
+            .center {
+                height: 850px;
+                .menu_box {
+                    width: 18%; left: 3%; top: 55px;
+                    .title { font-size: 50px; padding-bottom: 50px;}
+                }
+                .center_img_wrap {
+                    height: 350px;
+                    .center_img.on {display: block;}
+                }
+                .right {
+                    .right_box{
+                        padding: 107px 5px 0 145px;
+                        .right_bot {
+                            .bot_box_wrap {
+                                .bot_box {
+                                    width: 20%;
+                                    .text {font-size: 15px;}
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+        //메인페이지 inner 영역
+        .inner {
+            .inner_top {
+                font-size: 43px;
+            }
+            .inner_mid {
+                width: 100%;
+                img {width: 100%; height: 650px;}
+            }
+        }
+        //메인페이지 count 영역
+        .count {
+            .left {
+                padding-left: 40px;
+                .title {font-size: 55px; line-height: 70px;}
+                .text {font-size: 18px;}
+                .count_wrap { padding: 40px 50px; border: 2px solid #fff;}
+            }
+            .right {
+                .big_circle_line {right: -97%; width: 850px; height: 850px;}
+                .small_circle_line {right: -97%; width: 850px; height: 850px;}
+                .big_img {width: 350px; height: 350px; margin-right: 70px;}
+                .small_img {width: 100px; height: 100px; top: 185px;}
+            }
+        }
+        //메인페이지 notice 영역
+        // .notice {
+        // }
+    }
+}

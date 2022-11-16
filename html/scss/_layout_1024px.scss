@@ -1,0 +1,77 @@
+@media screen and (max-width:1024px) {
+    //상단 영역
+    #header {
+        .center {
+            .logo {
+                line-height: 100px;
+                a {
+                    img {
+                        width: 150px; height: 30px;
+                        position: relative; bottom: 4px;
+                    }
+                }
+            }
+            .gnb {display: none;}
+            .right {display: none;}
+            .mobile_menu {display: block;}
+        }
+    }
+    // 중간 영역
+    #container {
+        //메인페이지 slide 영역
+        .slide_wrap {
+            .slide {
+                .view {
+                    .slide_box {
+                        .text_box {font-size: 38px;}
+                    }
+                }
+            }
+        }
+        //메인페이지 menu_tab 영역
+        .menu_tab {
+            .center {
+                height: 850px;
+                flex-wrap: wrap;
+                > div {width: 100%;}
+                .menu_box {
+                    width: 18%; left: 3%; top: 55px;
+                    .title { font-size: 50px; padding-bottom: 50px;}
+                }
+                .center_img_wrap {display: none;}
+                .left {height: 510px;}
+                .right {
+                    height: 750px;
+                    .right_box{
+                        width: 100%; padding: 20px;
+                        .menu_title {padding-left: 20px;}
+                        .text {padding-left: 20px;}
+                        .menu_img_wrap {
+                            
+                            .menu_img {
+                                margin: 0 2% 130px;
+                                height: 270px;
+                            }
+                        }
+                        .right_bot {
+                            .bot_box_wrap {
+                                justify-content: center;
+                                .bot_box {
+                                    width: 20%;
+                                    .text {font-size: 15px; padding-left: 0;}
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+        //메인페이지 inner 영역
+        .inner {
+            margin-top: 570px;
+            .inner_mid {
+                img { height: 500px;}
+            }
+        }
+    }
+}

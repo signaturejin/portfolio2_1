@@ -11,7 +11,7 @@
     <%- include("common/icon_font.ejs") %>
 </head>
 <body>
-    <%- include("common/header.ejs",{change:"notmain", logo:"logo_black.png"}); %>
+    <%- include("common/header.ejs",{change:"main", logo:"logo_white.png"}); %>
     <div id="container">
         <div class="store_map_wrap">
             <div class="center">
@@ -49,6 +49,7 @@
                     </div>
                 </div>
                 <div class="store_map_list">
+                    <h3>매장리스트</h3>
                     <div class="h_line">
                         <div class="name">매장명</div>
                         <div class="addr">매장주소</div>
@@ -70,7 +71,9 @@
             </div>
         </div>
     </div>
-    <%- include("common/footer.ejs",{change:"white_ver", logo:"logo_black.png"}); %>
+    <%- include("common/footer.ejs",{change:"black_ver", logo:"logo_white.png"}); %>
+    <!-- 맨 위로 가는 태그영역 -->
+    <%- include("common/go_top.ejs") %>
     <!-- js -->
     <script src="/js/hangjungdong.js"></script>
     <script src="/js/store_address.js"></script>
