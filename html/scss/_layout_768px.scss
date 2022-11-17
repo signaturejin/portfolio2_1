@@ -1,0 +1,22 @@
+@media screen and (max-width:768px) {
+    #container {
+        //메인페이지 carousel 영역
+        .carousel {
+            .center {
+                .carousel_wrap {
+                    .carousel_box {width: 400%;}
+                }
+            }
+        }
+        //메뉴페이지
+        .clothes_menu_wrap {
+            .center {
+                width: 95%;
+                .title {padding-left: 0; text-align: center;}
+                .list_wrap {
+                    .list_box {width: 43%; margin: 3%;}
+                }
+            }
+        }
+    }
+}

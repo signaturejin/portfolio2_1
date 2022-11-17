@@ -1,0 +1,65 @@
+@media screen and (max-width:930px) {
+    //중간 영역
+    #container {
+        //메인페이지 menu_tab 영역
+        .menu_tab {
+            .center {
+                .menu_box {width: 30%;}
+                .right {
+                    .right_box{
+                        .menu_img_wrap {
+                            .menu_img {
+                                margin: 0 1% 130px 0;
+                                width: 33%;
+                            }
+                        }
+                    }   
+                }
+            }
+        }
+        //메인페이지 count 영역
+        .count {
+            .left {
+                .count_wrap {padding: 40px 35px;}
+            }
+        }
+        //메인페이지 notice 영역
+        .notice {
+            .center {
+                flex-direction: column;
+                > .left {
+                    width: 100%;
+                    border-right: none;
+                    .title {
+                        border-bottom: 1px solid #cbcbcb;
+                        padding: 60px 45px;
+                        .text {
+                            &:nth-child(2) {padding-left: 0;}
+                        } 
+                    }
+                }
+                .right {width: 100%;}
+            }
+        }
+    }
+
+    // 하단 영역
+    #footer {
+        .center {
+            .info {
+                .wrap {
+                    p {display: block;}
+                    .addr {margin-bottom: 12px;}
+                    .load_addr {margin-bottom: 12px;}
+                    .wrap_930 {
+                        display: flex; justify-content: center;
+                        &:first-child {margin-bottom: 12px;}
+                    }
+                }
+                .addr, .comp_num {
+                    &::after {display: none;}
+                }
+            }
+        }
+    }
+}

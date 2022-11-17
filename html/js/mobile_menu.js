@@ -3,8 +3,6 @@ const mobile_btn = document.querySelector(".mobile_menu");
 const mobile_board = document.querySelector(".mobile_board");
 const close_btn = document.querySelector(".close_btn .wrap");
 
-console.log(close_btn);
-
 mobile_btn.addEventListener("click",()=>{
     mobile_btn.classList.add("close");
     mobile_board.style.right = 0;

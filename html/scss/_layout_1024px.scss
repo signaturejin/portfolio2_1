@@ -16,7 +16,7 @@
             .mobile_menu {display: block;}
         }
     }
-    // 중간 영역
+    //중간 영역
     #container {
         //메인페이지 slide 영역
         .slide_wrap {
@@ -71,6 +71,67 @@
             margin-top: 570px;
             .inner_mid {
                 img { height: 500px;}
+            }
+        }
+        //메인페이지 count 영역
+        .count {
+            .left {
+                width: 90%; margin: 0 auto;
+                .count_wrap {
+                    padding: 40px 100px;
+                    .count_box {
+                        .count_view {
+                            .count_num {font-size: 80px;}
+                        }
+                    }
+                }
+            }
+            .right {display: none;}
+        }
+        //메인페이지 notice 영역
+        .notice {
+            .center {
+                > .left {
+                    .title {
+                        font-size: 65px;
+                        padding: 40px 45px;
+                        .text {
+                            &:nth-child(2) {padding-left: 106px;}
+                        } 
+                    }
+                }
+                .right {
+                    .notice_box {
+                        .left {
+                            padding: 50px 55px;
+                            .notice_title {
+                                a {
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //메인페이지 carousel 영역
+        .carousel {
+            .center {
+                .carousel_wrap {
+                    .carousel_box {width: 266.666%;}
+                }
+            }
+        }
+        //메뉴페이지
+        .clothes_menu_wrap {
+            .center {
+                width: 95%;
+                .title {padding-left: 15px;}
+                .list_wrap {
+                    .list_box {width: 29%;}
+                }
             }
         }
     }

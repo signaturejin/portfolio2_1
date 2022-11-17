@@ -1,0 +1,92 @@
+@media screen and (max-width: 540px) {
+    // 중간 영역
+    #container {
+        //메인페이지 slide 영역
+        .slide_wrap {
+            .slide {
+                .view {
+                    .slide_box {
+                        .text_box {font-size: 25px; line-height: 35px;}
+                        &:nth-child(1) {
+                            .text_box {right: 5%;}
+                        }
+                        &:nth-child(2) {
+                            .text_box {top: 55px;}
+                        }
+                        &:nth-child(3) {
+                            .text_box {font-size: 38px; line-height: 48px;}
+                        }
+                    }
+                }
+                .slide_btn_set {
+                    left: 50%; top: 18px;
+                    transform: translateX(-50%);
+                    display: flex;
+                    .slide_btn {margin: 0 5px;}
+                }
+            }
+        }
+        //메인페이지 inner 영역
+        .inner {
+            .inner_top {
+                padding: 65px 0; font-size: 32px;
+            }
+            .inner_mid {
+                img { height: 400px;}
+            }
+        }
+        //메인페이지 count 영역
+        .count {
+            .left {
+                margin-left: 0;
+                .title {
+                    font-size: 45px; line-height: 58px;
+                    padding: 130px 0 50px;
+                }
+                .text {
+                    font-size: 16px; line-height: 27px;
+                    padding-bottom: 100px;
+                }
+                .count_wrap {
+                    padding: 40px 35px;
+                    .count_title {font-size: 18px; padding-bottom: 35px;}
+                    .count_box {
+                        font-size: 16px;
+                        > span {font-size: 26px;}
+                        .count_view {
+                            .count_num {font-size: 38px;}
+                        }
+                    }
+                }
+            }
+        }
+        //메인페이지 rolling 영역
+        .rolling {
+            .title {font-size: 42px;}
+            .rolling_wrap {
+                .rolling_img_box {
+                    width: 800%;
+                }
+            }
+        }
+        //메인페이지 carousel 영역
+        .carousel {
+            .center {
+                .carousel_wrap {
+                    .carousel_box {width: 800%;}
+                }
+            }
+        }
+    }
+
+    // 하단 영역
+    #footer {
+        .center {
+            .info {
+                .bar {
+                    &::after {left: 0; margin: 0 12px;}
+                }
+            }
+        }
+    }
+}

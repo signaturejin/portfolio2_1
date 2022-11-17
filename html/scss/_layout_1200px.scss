@@ -28,19 +28,16 @@
                 .view {
                     height: 650px;
                     .slide_box {
+                        .text_box {font-size: 42px; line-height: 50px;}
                         &:nth-child(1) {
                             .text_box { right: 9%; top: 20%;}
                         }
                         &:nth-child(2) {
-                            .text_box {
-                                left: 50%; top: 80px;
-                                transform: translateX(-50%);
-                            }
+                            .text_box {top: 30px;}
                         }
                         &:nth-child(3) {
-                            .text_box {left: 115px; top: 50px;}
+                            .text_box {font-size: 70px; line-height: 77px;}
                         }
-                        .text_box {font-size: 42px; line-height: 50px;}
                     }
                 }
             }
@@ -97,8 +94,13 @@
                 .small_img {width: 100px; height: 100px; top: 185px;}
             }
         }
-        //메인페이지 notice 영역
-        // .notice {
-        // }
+        //메인페이지 rolling 영역
+        .rolling {
+            .rolling_wrap {
+                .rolling_img_box {
+                    width: 533.333%;
+                }
+            }
+        }
     }
 }

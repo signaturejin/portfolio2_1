@@ -1,4 +1,4 @@
-// 상단 영역
+//상단 영역
 #header {
     display: flex; justify-content: center;
     position: relative; z-index: 99;
@@ -44,7 +44,6 @@
                     position: absolute; left: 0; top: 100px;
                     text-align: center;
                     transition: all 0.5s ease-in-out;
-                    // background-color: #fff;
                     li {
                         line-height: 50px;
                         &:nth-child(1) {padding-top: 10px;}
@@ -59,10 +58,8 @@
         }
         .right {
             display: flex; align-items: center;
-            // 나중에 클래스 달고 이름 바꿔주기
             > a {
                 display: block;
-                // background-color: #000;
                 color: #fff;
                 width: 140px;
                 line-height: 40px;
@@ -71,6 +68,7 @@
                 border-radius: 20px;
                 &:hover {
                     background-color: #fff;
+                    border: 3px solid #ff8a28;
                     color: #000;
                     font-weight: 500;
                 }
@@ -116,7 +114,7 @@
         }
         .mobile_board {
             width: 500px; height: 100vh;    
-            position: absolute; top: 0; right: -100%;
+            position: absolute; top: 0; right: -130%;
             background-color: #000;
             transition: all 0.5s;
             .close_btn {
@@ -151,6 +149,7 @@
                             padding-left: 12px;
                             a {
                                 color: #000;
+                                font-weight: 500;
                             }
                         }
                     }
@@ -187,6 +186,7 @@
                 border-radius: 20px;
                 &:hover {
                     background-color: #fff;
+                    border: 3px solid #ff8a28;
                     color: #000;
                     font-weight: 500;
                 }
@@ -245,10 +245,13 @@
                 }
             }
         }
+        .mobile_menu {
+            .bar {background-color: #000;}
+        }
     }
 }
 
-// 중간 영역
+//중간 영역
 #container {
     //메인페이지 slide 영역
     .slide_wrap {
@@ -275,13 +278,20 @@
                     &:nth-child(2) {
                         background-image: url("/img/slide2.jpg");
                         .text_box {
-                            left: 50%; top: 80px;
+                            left: 50%; top: 45px;
                             transform: translateX(-50%);
                         }
                     }
                     &:nth-child(3) {
-                        background-image: url("/img/slide3.jpg");
-                        .text_box {left: 115px; top: 50px;}
+                        background-image: url("/img/slide3-1.jpg");
+                        background-position: center;
+                        .text_box {
+                            left: 50%; top: 50%;
+                            transform: translate(-50%,-50%);
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 80px; line-height: 87px;
+                        }
                     }
                     .text_box {
                         position: absolute; font-size: 58px;
@@ -297,9 +307,6 @@
                 transform: translateX(-50%);
                 text-align: center;
                 z-index: 5;
-                // .material-symbols-outlined {
-                //     font-size: 37px;
-                // }
                 .mouse_wrap {
                     .mouse {
                         position: relative;
@@ -311,7 +318,7 @@
                         .mouse_wheel {
                             position: absolute; left: 50%; top: 5px;
                             transform: translateX(-50%);
-                            width: 10px; height: 10px;
+                            width: 9px; height: 10px;
                             transition:all 0.5s;
                             border-radius: 5px; background-color: #000;
                         }
@@ -681,10 +688,70 @@
             }
         }
     }
+    //메인페이지 rolling 영역
+    .rolling {
+        background-color: #000;
+        padding-bottom: 100px;
+        .title {
+            color: #fff; padding: 50px;
+            font-size: 60px;
+        }
+        .rolling_wrap {
+            width: 100%;
+            overflow: hidden;
+            .rolling_img_box {
+                width: 400%;
+                display: flex;
+                // flex-wrap: nowrap;
+                animation: move 20s linear infinite;
+                @keyframes move {
+                    0% {transform: translateX(0);}
+                    100% {transform: translateX(-50%);}
+                }
+                .img_wrap,.clone {
+                    width: 12.5%; padding: 0 0.3%;
+                    box-sizing: border-box;
+                    .rolling_img {width: 100%;}
+                }
+            }
+        }
+    }
+    //메인페이지 carousel 영역
+    .carousel {
+        padding: 80px 0;
+        .title {padding: 50px; font-size: 60px;}
+        .center {
+            margin: 0 auto;
+            display: flex; justify-content: center;
+            .carousel_wrap {
+                width: 90%; overflow: hidden; position: relative;
+                .carousel_box {
+                    width: 200%; display: flex;
+                    .carousel_img {
+                        width: 12.5%; box-sizing: border-box;
+                        padding: 0 0.7%;
+                        img {width: 100%;}
+                    }
+                }
+                .carousel_btn_set {
+                    > div {
+                        position: absolute; top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(0,0,0,0.8);
+                        color: #fff; width: 60px; line-height: 60px;
+                        border-radius: 50%; text-align: center;
+                        i {position: relative; top: 3px; font-size: 25px;}
+                    }
+                    .prev_btn {left: 0;}
+                    .next_btn {right: 0;}
+                }
+            }
+        }
+    }
     //메뉴페이지
     .clothes_menu_wrap {
         display: flex; justify-content: center;
-        background-color: #000;
+        background-color: #000; padding-bottom: 100px;
         .center {
             width: 67%;
             .title {padding: 110px 0 70px; font-size: 50px; color: #fff;} 
@@ -751,7 +818,7 @@
             }
         }
     }
-    // 매장위치 페이지
+    //매장위치 페이지
     .store_map_wrap {
         display: flex; justify-content: center;
         .center {
@@ -764,15 +831,6 @@
                 > div {width: 50%;}
                 .left {
                     .map_img {width: 100%; height: 800px;}
-                //     .map_img {
-                //         width: 48%;
-                //     }
-                //     .mi1, .mi4 {
-                //         height: 400px;
-                //     }
-                //     .mi2, .mi3 {
-                //         height: 100px;
-                //     }
                 }
                 .right {
                     padding-left: 50px;
@@ -809,7 +867,7 @@
                 }
             }
             .store_map_list {
-                padding-bottom: 300px;
+                margin-bottom: 300px;
                 h3 {
                     padding-bottom: 40px; font-size: 33px;
                     color: #ff8a28;
@@ -839,7 +897,7 @@
     }
 }
 
-// 관리자 상품관리페이지
+//관리자 상품관리페이지
 #admin_prd_page {
     .prd_list_wrap {
         display: flex; flex-wrap: wrap;
@@ -852,7 +910,7 @@
     > form {margin: 50px 0;}
 }
 
-// 관리자 매장관리페이지
+//관리자 매장관리페이지
 #admin_store_page {
     .store_list_wrap {
         border: 1px solid red;
@@ -869,7 +927,7 @@
     }
 }
 
-// 하단 영역
+//하단 영역
 #footer {
     display: flex; justify-content: center;
     background-color: #000;
@@ -936,8 +994,6 @@
     border-top: 1px solid #000;
     .center {
         text-align: center;
-        // .f_logo {
-        // }
         .f_sns {
             li {
                 a {

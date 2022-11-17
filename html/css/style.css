@@ -119,6 +119,7 @@ body {
 }
 #header .center .right > a:hover {
   background-color: #fff;
+  border: 3px solid #ff8a28;
   color: #000;
   font-weight: 500;
 }
@@ -174,7 +175,7 @@ body {
   height: 100vh;
   position: absolute;
   top: 0;
-  right: -100%;
+  right: -130%;
   background-color: #000;
   transition: all 0.5s;
 }
@@ -227,6 +228,7 @@ body {
 }
 #header .center .mobile_board .mobile_gnb > li .mobile_sub_menu li a {
   color: #000;
+  font-weight: 500;
 }
 #header .center .mobile_board .sns {
   display: flex;
@@ -261,6 +263,7 @@ body {
 }
 #header .center .mobile_board > a:hover {
   background-color: #fff;
+  border: 3px solid #ff8a28;
   color: #000;
   font-weight: 500;
 }
@@ -296,6 +299,9 @@ body {
 #header.notmain .center .right .sns li a i:hover {
   background-color: #000;
   color: #fff;
+}
+#header.notmain .center .mobile_menu .bar {
+  background-color: #000;
 }
 
 #container .slide_wrap .slide {
@@ -335,15 +341,21 @@ body {
 }
 #container .slide_wrap .slide .view .slide_box:nth-child(2) .text_box {
   left: 50%;
-  top: 80px;
+  top: 45px;
   transform: translateX(-50%);
 }
 #container .slide_wrap .slide .view .slide_box:nth-child(3) {
-  background-image: url("/img/slide3.jpg");
+  background-image: url("/img/slide3-1.jpg");
+  background-position: center;
 }
 #container .slide_wrap .slide .view .slide_box:nth-child(3) .text_box {
-  left: 115px;
-  top: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 80px;
+  line-height: 87px;
 }
 #container .slide_wrap .slide .view .slide_box .text_box {
   position: absolute;
@@ -375,7 +387,7 @@ body {
   left: 50%;
   top: 5px;
   transform: translateX(-50%);
-  width: 10px;
+  width: 9px;
   height: 10px;
   transition: all 0.5s;
   border-radius: 5px;
@@ -847,10 +859,96 @@ body {
   font-size: 25px;
   padding-right: 50px;
 }
+#container .rolling {
+  background-color: #000;
+  padding-bottom: 100px;
+}
+#container .rolling .title {
+  color: #fff;
+  padding: 50px;
+  font-size: 60px;
+}
+#container .rolling .rolling_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+#container .rolling .rolling_wrap .rolling_img_box {
+  width: 400%;
+  display: flex;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap, #container .rolling .rolling_wrap .rolling_img_box .clone {
+  width: 12.5%;
+  padding: 0 0.3%;
+  box-sizing: border-box;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .rolling_img, #container .rolling .rolling_wrap .rolling_img_box .clone .rolling_img {
+  width: 100%;
+}
+#container .carousel {
+  padding: 80px 0;
+}
+#container .carousel .title {
+  padding: 50px;
+  font-size: 60px;
+}
+#container .carousel .center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+#container .carousel .center .carousel_wrap {
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+}
+#container .carousel .center .carousel_wrap .carousel_box {
+  width: 200%;
+  display: flex;
+}
+#container .carousel .center .carousel_wrap .carousel_box .carousel_img {
+  width: 12.5%;
+  box-sizing: border-box;
+  padding: 0 0.7%;
+}
+#container .carousel .center .carousel_wrap .carousel_box .carousel_img img {
+  width: 100%;
+}
+#container .carousel .center .carousel_wrap .carousel_btn_set > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+#container .carousel .center .carousel_wrap .carousel_btn_set > div i {
+  position: relative;
+  top: 3px;
+  font-size: 25px;
+}
+#container .carousel .center .carousel_wrap .carousel_btn_set .prev_btn {
+  left: 0;
+}
+#container .carousel .center .carousel_wrap .carousel_btn_set .next_btn {
+  right: 0;
+}
 #container .clothes_menu_wrap {
   display: flex;
   justify-content: center;
   background-color: #000;
+  padding-bottom: 100px;
 }
 #container .clothes_menu_wrap .center {
   width: 67%;
@@ -1027,7 +1125,7 @@ body {
   font-size: 21px;
 }
 #container .store_map_wrap .center .store_map_list {
-  padding-bottom: 300px;
+  margin-bottom: 300px;
 }
 #container .store_map_wrap .center .store_map_list h3 {
   padding-bottom: 40px;
@@ -1251,22 +1349,20 @@ body {
   #container .slide_wrap .slide .view {
     height: 650px;
   }
+  #container .slide_wrap .slide .view .slide_box .text_box {
+    font-size: 42px;
+    line-height: 50px;
+  }
   #container .slide_wrap .slide .view .slide_box:nth-child(1) .text_box {
     right: 9%;
     top: 20%;
   }
   #container .slide_wrap .slide .view .slide_box:nth-child(2) .text_box {
-    left: 50%;
-    top: 80px;
-    transform: translateX(-50%);
+    top: 30px;
   }
   #container .slide_wrap .slide .view .slide_box:nth-child(3) .text_box {
-    left: 115px;
-    top: 50px;
-  }
-  #container .slide_wrap .slide .view .slide_box .text_box {
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 70px;
+    line-height: 77px;
   }
   #container .menu_tab .center {
     height: 850px;
@@ -1338,6 +1434,9 @@ body {
     width: 100px;
     height: 100px;
     top: 185px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box {
+    width: 533.333%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1416,5 +1515,198 @@ body {
   }
   #container .inner .inner_mid img {
     height: 500px;
+  }
+  #container .count .left {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #container .count .left .count_wrap {
+    padding: 40px 100px;
+  }
+  #container .count .left .count_wrap .count_box .count_view .count_num {
+    font-size: 80px;
+  }
+  #container .count .right {
+    display: none;
+  }
+  #container .notice .center > .left .title {
+    font-size: 65px;
+    padding: 40px 45px;
+  }
+  #container .notice .center > .left .title .text:nth-child(2) {
+    padding-left: 106px;
+  }
+  #container .notice .center .right .notice_box .left {
+    padding: 50px 55px;
+  }
+  #container .notice .center .right .notice_box .left .notice_title a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #container .carousel .center .carousel_wrap .carousel_box {
+    width: 266.666%;
+  }
+  #container .clothes_menu_wrap .center {
+    width: 95%;
+  }
+  #container .clothes_menu_wrap .center .title {
+    padding-left: 15px;
+  }
+  #container .clothes_menu_wrap .center .list_wrap .list_box {
+    width: 29%;
+  }
+}
+@media screen and (max-width: 930px) {
+  #container .menu_tab .center .menu_box {
+    width: 30%;
+  }
+  #container .menu_tab .center .right .right_box .menu_img_wrap .menu_img {
+    margin: 0 1% 130px 0;
+    width: 33%;
+  }
+  #container .count .left .count_wrap {
+    padding: 40px 35px;
+  }
+  #container .notice .center {
+    flex-direction: column;
+  }
+  #container .notice .center > .left {
+    width: 100%;
+    border-right: none;
+  }
+  #container .notice .center > .left .title {
+    border-bottom: 1px solid #cbcbcb;
+    padding: 60px 45px;
+  }
+  #container .notice .center > .left .title .text:nth-child(2) {
+    padding-left: 0;
+  }
+  #container .notice .center .right {
+    width: 100%;
+  }
+  #footer .center .info .wrap p {
+    display: block;
+  }
+  #footer .center .info .wrap .addr {
+    margin-bottom: 12px;
+  }
+  #footer .center .info .wrap .load_addr {
+    margin-bottom: 12px;
+  }
+  #footer .center .info .wrap .wrap_930 {
+    display: flex;
+    justify-content: center;
+  }
+  #footer .center .info .wrap .wrap_930:first-child {
+    margin-bottom: 12px;
+  }
+  #footer .center .info .addr::after, #footer .center .info .comp_num::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 845px) {
+  #container .store_map_wrap .center {
+    width: 90%;
+  }
+  #container .store_map_wrap .center .store_search .left {
+    display: none;
+  }
+  #container .store_map_wrap .center .store_search .right {
+    width: 100%;
+    padding-left: 0;
+  }
+  #container .store_map_wrap .center .store_map_list {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 768px) {
+  #container .carousel .center .carousel_wrap .carousel_box {
+    width: 400%;
+  }
+  #container .clothes_menu_wrap .center {
+    width: 95%;
+  }
+  #container .clothes_menu_wrap .center .title {
+    padding-left: 0;
+    text-align: center;
+  }
+  #container .clothes_menu_wrap .center .list_wrap .list_box {
+    width: 43%;
+    margin: 3%;
+  }
+}
+@media screen and (max-width: 540px) {
+  #container .slide_wrap .slide .view .slide_box .text_box {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  #container .slide_wrap .slide .view .slide_box:nth-child(1) .text_box {
+    right: 5%;
+  }
+  #container .slide_wrap .slide .view .slide_box:nth-child(2) .text_box {
+    top: 55px;
+  }
+  #container .slide_wrap .slide .view .slide_box:nth-child(3) .text_box {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  #container .slide_wrap .slide .slide_btn_set {
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  #container .slide_wrap .slide .slide_btn_set .slide_btn {
+    margin: 0 5px;
+  }
+  #container .inner .inner_top {
+    padding: 65px 0;
+    font-size: 32px;
+  }
+  #container .inner .inner_mid img {
+    height: 400px;
+  }
+  #container .count .left {
+    margin-left: 0;
+  }
+  #container .count .left .title {
+    font-size: 45px;
+    line-height: 58px;
+    padding: 130px 0 50px;
+  }
+  #container .count .left .text {
+    font-size: 16px;
+    line-height: 27px;
+    padding-bottom: 100px;
+  }
+  #container .count .left .count_wrap {
+    padding: 40px 35px;
+  }
+  #container .count .left .count_wrap .count_title {
+    font-size: 18px;
+    padding-bottom: 35px;
+  }
+  #container .count .left .count_wrap .count_box {
+    font-size: 16px;
+  }
+  #container .count .left .count_wrap .count_box > span {
+    font-size: 26px;
+  }
+  #container .count .left .count_wrap .count_box .count_view .count_num {
+    font-size: 38px;
+  }
+  #container .rolling .title {
+    font-size: 42px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box {
+    width: 800%;
+  }
+  #container .carousel .center .carousel_wrap .carousel_box {
+    width: 800%;
+  }
+  #footer .center .info .bar::after {
+    left: 0;
+    margin: 0 12px;
   }
 }
