@@ -111,11 +111,77 @@ app.get("/",(req,res)=>{
 
 // 메뉴페이지 경로요청
 // 상의
-app.get("/menu/top",(req,res)=>{
-    db.collection("prdlist").find({prd_category:"상의"}).toArray((err,f_result)=>{
-        res.render("shop_menu", {prdData: f_result});
+// app.get("/menu/top",(req,res)=>{
+//     db.collection("prdlist").find({prd_category:"상의"}).toArray((err,f_result)=>{
+//         res.render("shop_menu", {prdData: f_result});
+//     });
+// });
+
+// test
+//async / await -> 동기화작업
+app.get("/menu/top",async(req,res)=>{
+
+    //페이징번호가 null값이면 1로, 값이 있다면 해당 값을 변수에 대입(페이징번호)
+    //req.query의 값은 string유형이기 때문에 number값으로 변경
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page)
+    //한 페이지당 보여줄 데이터갯수
+    let per_page = 3;
+    //블록당 보여줄 페이징 번호갯수
+    let block_count = 2;
+    //현재 페이지 블록구하기(결과값이 소수점이므로 올림해줌)
+    //ex) 현재 페이지번호: 2 / block_count = 2 -> 현재 페이지블록: 1
+    let block_number = Math.ceil(page_number / block_count);
+    //세트당 블록의 시작번호 값 구하기
+    //ex)현재 블록이 1일 경우: ((1-1)*2)+1 = 1
+    //첫번째 블록의 시작번호는 1
+    let block_start = ((block_number -1) * block_count) + 1;
+    //세트당 블록의 끝번호 값 구하기
+    //ex)블록의 첫번째 숫자가 1일 경우: 1 + 2 - 1 = 2
+    //첫번째 블록의 페이징 끝 번호는 2
+    let block_end = block_start + block_count - 1;
+
+    //db의 prdlist콜렉션에서 상의로 분류된 데이터가 총 몇개인지 가져오는 명령어
+    //find까지 써줄때는 countDocuments 대신 count
+    //동기화 안해주면 값 이상하게 나옴
+    let total_data = await db.collection("prdlist").find({prd_category:"상의"}).count({});
+    //위에서 구한 전체데이터값을 통해 총 몇개의 페이징 번호가 만들어져야하는지 구하기
+    //ex)총 데이터 수: 6 / 한페이지당 보여줄 데이터 수: 4개 -> 2개
+    //데이터ㅁ6개 -> (페이지1)ㅁㅁㅁㅁ / (페이지2)ㅁㅁ
+    let paging = Math.ceil(total_data / per_page);
+    //블록에서 마지막번호가 페이징의 끝번호보다 크다면 페이징의 끝번호를 강제부여
+    //ex)위에서 구한 (페이지1)ㅁㅁㅁㅁ / (페이지2)ㅁㅁ -> (페이지1)ㅁㅁㅁㅁ / (페이지2)ㅁㅁㅁㅁ가 되는건 x
+    if(block_end > paging){
+        block_end = paging;
+    }
+
+    //블록의 총 갯수 구하기(결과값이 소수점이므로 올림해줌)
+    //ex)페이징수:2 / 블록당 보여줄 페이징수:2 
+    let total_block = Math.ceil(paging / block_count);
+    //db에서 꺼내오는 데이터의 시작 순번값 결정
+    //ex)현재 페이지가 2일 경우: (2-1)*4 = 4
+    let start_from = (page_number - 1) * per_page;
+
+    //db의 prdlist콜렉션에서 category가 상의인 것만 모두 찾아서 정렬한다.
+    db.collection("prdlist").find({prd_category:"상의"}).sort({number:-1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+        res.render("shop_menu", {
+            //prdlist에서 상의로 분류된 데이터들
+            prdData: f_result,
+            //페이징 번호의 총 갯수값
+            paging: paging,
+            //현재 페이지를 알려주는 값
+            page_number: page_number,
+            //블록에서의 페이지 시작번호값
+            block_start: block_start,
+            //블록에서의 페이지 끝번호값
+            block_end: block_end,
+            //블록의 번호 순서값
+            block_number: block_number,
+            //블록의 총 갯수
+            total_block: total_block
+        });
     });
 });
+
 // 아우터
 app.get("/menu/outer",(req,res)=>{
     db.collection("prdlist").find({prd_category:"아우터"}).toArray((err,f_result)=>{

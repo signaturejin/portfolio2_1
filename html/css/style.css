@@ -1057,6 +1057,12 @@ body {
 #container .clothes_menu_wrap .center .list_wrap .list_box > a .text_box .price_wrap .right .percent span {
   padding-left: 1px;
 }
+#container .clothes_menu_wrap .center .page_list {
+  color: #fff;
+}
+#container .clothes_menu_wrap .center .page_list li a {
+  color: #fff;
+}
 #container .store_map_wrap {
   display: flex;
   justify-content: center;
