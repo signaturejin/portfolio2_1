@@ -162,7 +162,7 @@ app.get("/menu/top",async(req,res)=>{
     let start_from = (page_number - 1) * per_page;
 
     //db의 prdlist콜렉션에서 category가 상의인 것만 모두 찾아서 정렬한다.
-    db.collection("prdlist").find({prd_category:"상의"}).sort({number:-1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+    db.collection("prdlist").find({prd_category:"상의"}).sort({number:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
         res.render("shop_menu", {
             //prdlist에서 상의로 분류된 데이터들
             prdData: f_result,

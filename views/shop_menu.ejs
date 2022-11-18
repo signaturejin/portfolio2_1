@@ -65,6 +65,16 @@
                     <% if(block_start > total_block){ %> <!-- ?? -->
                         <li><a href="?page=<%-block_start - 1 %>">이전</a></li>
                     <% } %>
+
+                    <!-- 클릭한 li태그는 색깔을 다르게 하기 위해 반복문 사용 -->
+                    <!-- 블록의 세트 내에서 페이지 시작번호에서 시작해 끝번호로 끝나야 그 사이 숫자들이 나옴 -->
+                    <% for(let i=block_start; i<=block_end; i++){ %>
+                        <% if(page_number == 1){ %>
+                            <li class="on"><a href="?page=<%- i %>"><%- i %></a></li>
+                        <% } else { %>
+                            <li><a href="?page=<%- i %>"><%- i %></a></li>
+                        <% } %>
+                    <% } %>
                 </ul>
 
 
