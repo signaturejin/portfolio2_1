@@ -52,7 +52,7 @@ body {
   width: 180px;
   height: 35px;
 }
-#header .center .sub_menu_board {
+#header .center .gnb_wrap .sub_menu_board {
   position: absolute;
   left: 0;
   top: 100px;
@@ -61,18 +61,18 @@ body {
   transition: all 0.5s ease-in-out;
   background-color: #fff;
 }
-#header .center .gnb {
+#header .center .gnb_wrap .gnb {
   display: flex;
   margin-left: 90px;
 }
-#header .center .gnb > li {
+#header .center .gnb_wrap .gnb > li {
   line-height: 100px;
   position: relative;
 }
-#header .center .gnb > li:hover > a {
+#header .center .gnb_wrap .gnb > li:hover > a {
   color: #ff8a28;
 }
-#header .center .gnb > li > a {
+#header .center .gnb_wrap .gnb > li > a {
   color: #fff;
   width: 230px;
   display: block;
@@ -81,7 +81,7 @@ body {
   font-size: 17px;
   font-weight: 600;
 }
-#header .center .gnb > li .sub_menu {
+#header .center .gnb_wrap .gnb > li .sub_menu {
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -91,17 +91,17 @@ body {
   text-align: center;
   transition: all 0.5s ease-in-out;
 }
-#header .center .gnb > li .sub_menu li {
+#header .center .gnb_wrap .gnb > li .sub_menu li {
   line-height: 50px;
 }
-#header .center .gnb > li .sub_menu li:nth-child(1) {
+#header .center .gnb_wrap .gnb > li .sub_menu li:nth-child(1) {
   padding-top: 10px;
 }
-#header .center .gnb > li .sub_menu li a {
+#header .center .gnb_wrap .gnb > li .sub_menu li a {
   color: #000;
   transition: all 0.5s;
 }
-#header .center .gnb > li .sub_menu li a:hover {
+#header .center .gnb_wrap .gnb > li .sub_menu li a:hover {
   font-weight: bold;
 }
 #header .center .right {
@@ -1320,13 +1320,13 @@ body {
     position: relative;
     bottom: 4px;
   }
-  #header .center .gnb {
+  #header .center .gnb_wrap .gnb {
     margin-left: 0;
   }
-  #header .center .gnb > li {
+  #header .center .gnb_wrap .gnb > li {
     line-height: 100px;
   }
-  #header .center .gnb > li > a {
+  #header .center .gnb_wrap .gnb > li > a {
     width: 160px;
   }
 }
@@ -1340,10 +1340,10 @@ body {
     position: relative;
     bottom: 4px;
   }
-  #header .center .gnb > li {
+  #header .center .gnb_wrap .gnb > li {
     line-height: 100px;
   }
-  #header .center .gnb > li > a {
+  #header .center .gnb_wrap .gnb > li > a {
     width: 100px;
   }
   #container .slide_wrap .slide .view {
@@ -1449,7 +1449,7 @@ body {
     position: relative;
     bottom: 4px;
   }
-  #header .center .gnb {
+  #header .center .gnb_wrap .gnb {
     display: none;
   }
   #header .center .right {

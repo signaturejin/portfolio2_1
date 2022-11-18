@@ -11,7 +11,9 @@
                     }
                 }
             }
-            .gnb {display: none;}
+            .gnb_wrap {
+                .gnb {display: none;}
+            }
             .right {display: none;}
             .mobile_menu {display: block;}
         }

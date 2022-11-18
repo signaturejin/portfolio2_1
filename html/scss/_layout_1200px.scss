@@ -11,10 +11,12 @@
                     }
                 }
             }
-            .gnb {
-                > li {
-                    line-height: 100px;
-                    > a {width: 100px;}
+            .gnb_wrap {
+                .gnb {
+                    > li {
+                        line-height: 100px;
+                        > a {width: 100px;}
+                    }
                 }
             }
         }

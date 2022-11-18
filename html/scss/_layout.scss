@@ -11,46 +11,49 @@
             a {
                 img {width: 180px; height: 35px;}
             }
-        }
-        .sub_menu_board {
-            position: absolute; left: 0; top: 100px;
-            width: 100%;
-            height: 0;
-            transition: all 0.5s ease-in-out;
-            background-color: #fff;
-        }
-        .gnb {
-            display: flex;
-            margin-left: 90px;
-            > li {
-                line-height: 100px;
-                position: relative;
-                &:hover {
-                    > a {color: #ff8a28;}
-                }
-                > a {
-                    color: #fff;
-                    width: 230px;
-                    display: block;
-                    text-align: center;
-                    transition: all 0.3s;
-                    font-size: 17px;
-                    font-weight: 600;
-                }
-                .sub_menu {
-                    width: 100%;
-                    height: 0;
-                    overflow: hidden;
-                    position: absolute; left: 0; top: 100px;
-                    text-align: center;
-                    transition: all 0.5s ease-in-out;
-                    li {
-                        line-height: 50px;
-                        &:nth-child(1) {padding-top: 10px;}
-                        a {
-                            color: #000;
-                            transition: all 0.5s;
-                            &:hover {font-weight: bold;}
+        } 
+        .gnb_wrap {
+            .sub_menu_board {
+                position: absolute; left: 0; top: 100px;
+                width: 100%;
+                height: 0;
+                transition: all 0.5s ease-in-out;
+                background-color: #fff;
+            } 
+            .gnb {
+                display: flex;
+                margin-left: 90px;
+                
+                > li {
+                    line-height: 100px;
+                    position: relative;
+                    &:hover {
+                        > a {color: #ff8a28;}
+                    }
+                    > a {
+                        color: #fff;
+                        width: 230px;
+                        display: block;
+                        text-align: center;
+                        transition: all 0.3s;
+                        font-size: 17px;
+                        font-weight: 600;
+                    }
+                    .sub_menu {
+                        width: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        position: absolute; left: 0; top: 100px;
+                        text-align: center;
+                        transition: all 0.5s ease-in-out;
+                        li {
+                            line-height: 50px;
+                            &:nth-child(1) {padding-top: 10px;}
+                            a {
+                                color: #000;
+                                transition: all 0.5s;
+                                &:hover {font-weight: bold;}
+                            }
                         }
                     }
                 }
