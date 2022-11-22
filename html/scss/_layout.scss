@@ -640,8 +640,8 @@
                 border-right: 1px solid #cbcbcb;
                 .title {
                     text-transform: uppercase;
-                    font-size: 75px;
-                    padding: 50px;
+                    font-size: 80px;
+                    padding: 80px 50px;
                     .text {
                         &:nth-child(2) {
                             padding-left: 122px;
@@ -659,7 +659,7 @@
                     border-bottom: 1px solid #cbcbcb;
                     &:last-child {border: none;}
                     .left {
-                        padding: 50px 55px;
+                        padding: 90px 55px;
                         width: 60%;
                         .event {
                             padding-bottom: 15px;
@@ -694,10 +694,10 @@
     //메인페이지 rolling 영역
     .rolling {
         background-color: #000;
-        padding-bottom: 100px;
+        padding-bottom: 210px;
         .title {
-            color: #fff; padding: 50px;
-            font-size: 60px;
+            color: #fff; padding: 100px 50px 145px 50px;
+            font-size: 73px;
         }
         .rolling_wrap {
             width: 100%;
@@ -717,12 +717,15 @@
                     .rolling_img {width: 100%;}
                 }
             }
+            .rolling_img_box:hover {
+                animation-play-state: paused;
+            }
         }
     }
     //메인페이지 carousel 영역
     .carousel {
-        padding: 80px 0;
-        .title {padding: 50px; font-size: 60px;}
+        padding-bottom: 120px;
+        .title {padding: 100px 50px 145px 115px; font-size: 60px;}
         .center {
             margin: 0 auto;
             display: flex; justify-content: center;

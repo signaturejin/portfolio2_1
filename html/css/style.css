@@ -813,8 +813,8 @@ body {
 }
 #container .notice .center > .left .title {
   text-transform: uppercase;
-  font-size: 75px;
-  padding: 50px;
+  font-size: 80px;
+  padding: 80px 50px;
 }
 #container .notice .center > .left .title .text:nth-child(2) {
   padding-left: 122px;
@@ -833,7 +833,7 @@ body {
   border: none;
 }
 #container .notice .center .right .notice_box .left {
-  padding: 50px 55px;
+  padding: 90px 55px;
   width: 60%;
 }
 #container .notice .center .right .notice_box .left .event {
@@ -861,12 +861,12 @@ body {
 }
 #container .rolling {
   background-color: #000;
-  padding-bottom: 100px;
+  padding-bottom: 210px;
 }
 #container .rolling .title {
   color: #fff;
-  padding: 50px;
-  font-size: 60px;
+  padding: 100px 50px 145px 50px;
+  font-size: 73px;
 }
 #container .rolling .rolling_wrap {
   width: 100%;
@@ -893,11 +893,14 @@ body {
 #container .rolling .rolling_wrap .rolling_img_box .img_wrap .rolling_img, #container .rolling .rolling_wrap .rolling_img_box .clone .rolling_img {
   width: 100%;
 }
+#container .rolling .rolling_wrap .rolling_img_box:hover {
+  animation-play-state: paused;
+}
 #container .carousel {
-  padding: 80px 0;
+  padding-bottom: 120px;
 }
 #container .carousel .title {
-  padding: 50px;
+  padding: 100px 50px 145px 115px;
   font-size: 60px;
 }
 #container .carousel .center {
@@ -1444,6 +1447,12 @@ body {
   #container .rolling .rolling_wrap .rolling_img_box {
     width: 533.333%;
   }
+  #container .carousel .title {
+    padding: 100px 50px 145px 85px;
+  }
+  #container .carousel .center .carousel_wrap .carousel_box {
+    width: 266.666%;
+  }
 }
 @media screen and (max-width: 1024px) {
   #header .center .logo {
@@ -1550,8 +1559,11 @@ body {
     overflow: hidden;
     white-space: nowrap;
   }
+  #container .carousel .title {
+    padding: 100px 50px 125px 55px;
+  }
   #container .carousel .center .carousel_wrap .carousel_box {
-    width: 266.666%;
+    width: 400%;
   }
   #container .clothes_menu_wrap .center {
     width: 95%;
@@ -1703,7 +1715,7 @@ body {
     font-size: 38px;
   }
   #container .rolling .title {
-    font-size: 42px;
+    font-size: 61px;
   }
   #container .rolling .rolling_wrap .rolling_img_box {
     width: 800%;

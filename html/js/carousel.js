@@ -17,11 +17,11 @@ let browser_size = ()=>{
         //요소 하나가 뒤로 가 밀리기 때문에 원래 요소가 나오게 하기위한 margin 값
         set_margin = "-25%";
     }
-    else if(window.matchMedia("screen and (min-width:1025px) and (max-width:1200px)").matches){
+    else if(window.matchMedia("screen and (max-width:1200px) and (min-width:1025px)").matches){
         first_margin = "-66.666%";
         set_margin = "-33.333%";
     }
-    else if(window.matchMedia("screen and (min-width:541px) and (max-width:1024px)").matches){
+    else if(window.matchMedia("screen and (max-width:1024px) and (min-width:541px)").matches){
         first_margin = "-100%";
         set_margin = "-50%";
     }

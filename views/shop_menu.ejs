@@ -62,7 +62,7 @@
                         이전버튼을 누를경우 해당세트의 첫페이지 시작번호에서 1을 뺀 값으로 이동
                         즉, 3세트블록에서 시작번호의 이전인 2세트블록 마지막번호로 감
                     -->
-                    <% if(block_start > total_block){ %> <!-- ?? -->
+                    <% if(block_start > total_block){ %>
                         <li><a href="?page=<%-block_start - 1 %>">이전</a></li>
                     <% } %>
 
@@ -75,8 +75,21 @@
                             <li><a href="?page=<%- i %>"><%- i %></a></li>
                         <% } %>
                     <% } %>
-                </ul>
 
+                    <!-- 다음 -->
+                    <!-- 블록의 번호 순서값이 총 블록갯수보다 작을 때 다음버튼이 나옴 -->
+                    <% if(block_number < total_block){ %>
+                        <!-- 블록의 페이지 끝번호 + 1 을 해서 다음페이지로 이동 -->
+                        <li><a href="?page=<%- block_end + 1 %>">다음</a></li>
+                    <% } %>
+                    <!-- 마지막 -->
+                    <!-- 현재 페이지가 총 페이지의 수보다 크거나 같다면 마지막버튼을 누르지못함 -->
+                    <% if(page_number >= paging){ %>
+                        <li>마지막</li>
+                    <% }else{ %>
+                        <li><a href="?page=<%- paging %>">마지막</a></li>
+                    <% } %>
+                </ul>
 
             </div>
         </div>

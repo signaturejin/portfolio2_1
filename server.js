@@ -117,17 +117,18 @@ app.get("/",(req,res)=>{
 //     });
 // });
 
-// test
+//메뉴페이지 경로요청
 //async / await -> 동기화작업
+
 app.get("/menu/top",async(req,res)=>{
 
     //페이징번호가 null값이면 1로, 값이 있다면 해당 값을 변수에 대입(페이징번호)
     //req.query의 값은 string유형이기 때문에 number값으로 변경
-    let page_number = (req.query.page == null) ? 1 : Number(req.query.page)
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
     //한 페이지당 보여줄 데이터갯수
-    let per_page = 3;
+    let per_page = 4;
     //블록당 보여줄 페이징 번호갯수
-    let block_count = 2;
+    let block_count = 3;
     //현재 페이지 블록구하기(결과값이 소수점이므로 올림해줌)
     //ex) 현재 페이지번호: 2 / block_count = 2 -> 현재 페이지블록: 1
     let block_number = Math.ceil(page_number / block_count);
@@ -144,6 +145,7 @@ app.get("/menu/top",async(req,res)=>{
     //find까지 써줄때는 countDocuments 대신 count
     //동기화 안해주면 값 이상하게 나옴
     let total_data = await db.collection("prdlist").find({prd_category:"상의"}).count({});
+   
     //위에서 구한 전체데이터값을 통해 총 몇개의 페이징 번호가 만들어져야하는지 구하기
     //ex)총 데이터 수: 6 / 한페이지당 보여줄 데이터 수: 4개 -> 2개
     //데이터ㅁ6개 -> (페이지1)ㅁㅁㅁㅁ / (페이지2)ㅁㅁ
@@ -162,7 +164,9 @@ app.get("/menu/top",async(req,res)=>{
     let start_from = (page_number - 1) * per_page;
 
     //db의 prdlist콜렉션에서 category가 상의인 것만 모두 찾아서 정렬한다.
-    db.collection("prdlist").find({prd_category:"상의"}).sort({number:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+    db.collection("prdlist").find({prd_category:"상의"}).sort({prd_no:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+        console.log(f_result);
+        
         res.render("shop_menu", {
             //prdlist에서 상의로 분류된 데이터들
             prdData: f_result,
@@ -183,27 +187,115 @@ app.get("/menu/top",async(req,res)=>{
 });
 
 // 아우터
-app.get("/menu/outer",(req,res)=>{
-    db.collection("prdlist").find({prd_category:"아우터"}).toArray((err,f_result)=>{
-        res.render("shop_menu", {prdData: f_result});
+app.get("/menu/outer",async(req,res)=>{
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
+    let per_page = 4;
+    let block_count = 2;
+    let block_number = Math.ceil(page_number / block_count);
+    let block_start = ((block_number -1) * block_count) + 1;
+    let block_end = block_start + block_count - 1;
+    let total_data = await db.collection("prdlist").find({prd_category:"아우터"}).count({});
+    let paging = Math.ceil(total_data / per_page);
+    if(block_end > paging){
+        block_end = paging;
+    }
+    let total_block = Math.ceil(paging / block_count);
+    let start_from = (page_number - 1) * per_page;
+    db.collection("prdlist").find({prd_category:"아우터"}).sort({prd_no:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+
+        res.render("shop_menu", {
+            prdData: f_result,
+            paging: paging,
+            page_number: page_number,
+            block_start: block_start,
+            block_end: block_end,
+            block_number: block_number,
+            total_block: total_block
+        });
     });
 });
 // 하의
-app.get("/menu/bottom",(req,res)=>{
-    db.collection("prdlist").find({prd_category:"하의"}).toArray((err,f_result)=>{
-        res.render("shop_menu", {prdData: f_result});
+app.get("/menu/bottom",async(req,res)=>{
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
+    let per_page = 4;
+    let block_count = 2;
+    let block_number = Math.ceil(page_number / block_count);
+    let block_start = ((block_number -1) * block_count) + 1;
+    let block_end = block_start + block_count - 1;
+    let total_data = await db.collection("prdlist").find({prd_category:"하의"}).count({});
+    let paging = Math.ceil(total_data / per_page);
+    if(block_end > paging){
+        block_end = paging;
+    }
+    let total_block = Math.ceil(paging / block_count);
+    let start_from = (page_number - 1) * per_page;
+    db.collection("prdlist").find({prd_category:"하의"}).sort({prd_no:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+
+        res.render("shop_menu", {
+            prdData: f_result,
+            paging: paging,
+            page_number: page_number,
+            block_start: block_start,
+            block_end: block_end,
+            block_number: block_number,
+            total_block: total_block
+        });
     });
 });
 // 신발
-app.get("/menu/shoes",(req,res)=>{
-    db.collection("prdlist").find({prd_category:"신발"}).toArray((err,f_result)=>{
-        res.render("shop_menu", {prdData: f_result});
+app.get("/menu/shoes",async(req,res)=>{
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
+    let per_page = 4;
+    let block_count = 2;
+    let block_number = Math.ceil(page_number / block_count);
+    let block_start = ((block_number -1) * block_count) + 1;
+    let block_end = block_start + block_count - 1;
+    let total_data = await db.collection("prdlist").find({prd_category:"신발"}).count({});
+    let paging = Math.ceil(total_data / per_page);
+    if(block_end > paging){
+        block_end = paging;
+    }
+    let total_block = Math.ceil(paging / block_count);
+    let start_from = (page_number - 1) * per_page;
+    db.collection("prdlist").find({prd_category:"신발"}).sort({prd_no:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+
+        res.render("shop_menu", {
+            prdData: f_result,
+            paging: paging,
+            page_number: page_number,
+            block_start: block_start,
+            block_end: block_end,
+            block_number: block_number,
+            total_block: total_block
+        });
     });
 });
 // 모자
-app.get("/menu/cap",(req,res)=>{
-    db.collection("prdlist").find({prd_category:"모자"}).toArray((err,f_result)=>{
-        res.render("shop_menu", {prdData: f_result});
+app.get("/menu/cap",async(req,res)=>{
+    let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
+    let per_page = 4;
+    let block_count = 2;
+    let block_number = Math.ceil(page_number / block_count);
+    let block_start = ((block_number -1) * block_count) + 1;
+    let block_end = block_start + block_count - 1;
+    let total_data = await db.collection("prdlist").find({prd_category:"모자"}).count({});
+    let paging = Math.ceil(total_data / per_page);
+    if(block_end > paging){
+        block_end = paging;
+    }
+    let total_block = Math.ceil(paging / block_count);
+    let start_from = (page_number - 1) * per_page;
+    db.collection("prdlist").find({prd_category:"모자"}).sort({prd_no:1}).skip(start_from).limit(per_page).toArray((err,f_result)=>{
+
+        res.render("shop_menu", {
+            prdData: f_result,
+            paging: paging,
+            page_number: page_number,
+            block_start: block_start,
+            block_end: block_end,
+            block_number: block_number,
+            total_block: total_block
+        });
     });
 });
 
@@ -220,8 +312,9 @@ app.post("/add/login",passport.authenticate('local', {failureRedirect : '/fail'}
 
 // 관리자 상품관리페이지 경로 요청
 app.get("/admin/prdlist",(req,res)=>{
-    db.collection("prdlist").find().toArray((err,f_result)=>{
-        res.render("admin_prdlist",{prdData: f_result}, {adminData :req.user});
+    db.collection("prdlist").find().toArray((err,result)=>{
+        // res.render("admin_prdlist",{prdData: result}, {adminData: req.user});
+        res.render("admin_prdlist",{prdData: result},);
     });
 });
 
