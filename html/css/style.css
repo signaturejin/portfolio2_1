@@ -380,7 +380,7 @@ body {
   height: 50px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid #000;
+  border: 2px solid rgba(0, 0, 0, 0.8);
 }
 #container .slide_wrap .slide .mouse_icon .mouse_wrap .mouse .mouse_wheel {
   position: absolute;
@@ -391,7 +391,7 @@ body {
   height: 10px;
   transition: all 0.5s;
   border-radius: 5px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #container .slide_wrap .slide .mouse_icon .mouse_wrap .mouse .mouse_wheel.top {
   height: 23px;
