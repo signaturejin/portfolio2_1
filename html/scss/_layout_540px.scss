@@ -69,11 +69,43 @@
                 }
             }
         }
+        //메인페이지 rolling 영역
+        .rolling {
+            .rolling_wrap {
+                .rolling_img_box {
+                    .img_wrap,.clone {
+                        .hover_bg {
+                            a {
+                                margin-top: 20px;
+                                .comp_name {
+                                    font-size: 16px;
+                                    margin-bottom: 25px;
+                                }
+                                .clothes_name {
+                                    font-size: 17px;
+                                    line-height: 28px;
+                                    margin-bottom: 25px;
+                                }
+                                .fa-regular {font-size: 42px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
         //메인페이지 carousel 영역
         .carousel {
             .center {
                 .carousel_wrap {
                     .carousel_box {width: 800%;}
+                }
+            }
+        }
+        //메뉴페이지
+        .clothes_menu_wrap {
+            .center {
+                .list_wrap {
+                    .list_box {width: 77%; margin: 0 auto 50px;}
                 }
             }
         }

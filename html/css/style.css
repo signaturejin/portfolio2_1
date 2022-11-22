@@ -887,11 +887,43 @@ body {
 }
 #container .rolling .rolling_wrap .rolling_img_box .img_wrap, #container .rolling .rolling_wrap .rolling_img_box .clone {
   width: 12.5%;
-  padding: 0 0.3%;
+  margin: 0 0.3%;
   box-sizing: border-box;
+  position: relative;
 }
 #container .rolling .rolling_wrap .rolling_img_box .img_wrap .rolling_img, #container .rolling .rolling_wrap .rolling_img_box .clone .rolling_img {
   width: 100%;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  transition: all 0.5s;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a {
+  color: #fff;
+  display: block;
+  margin-top: 120px;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .comp_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .comp_name {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .clothes_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .clothes_name {
+  font-size: 23px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .fa-regular, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .fa-regular {
+  font-size: 50px;
+}
+#container .rolling .rolling_wrap .rolling_img_box .img_wrap:hover .hover_bg, #container .rolling .rolling_wrap .rolling_img_box .clone:hover .hover_bg {
+  opacity: 1;
 }
 #container .rolling .rolling_wrap .rolling_img_box:hover {
   animation-play-state: paused;
@@ -925,6 +957,12 @@ body {
 #container .carousel .center .carousel_wrap .carousel_box .carousel_img img {
   width: 100%;
 }
+#container .carousel .center .carousel_wrap .carousel_box .carousel_img .info_text a {
+  color: #000;
+  display: block;
+  padding-top: 10px;
+  line-height: 22px;
+}
 #container .carousel .center .carousel_wrap .carousel_btn_set > div {
   position: absolute;
   top: 50%;
@@ -946,6 +984,44 @@ body {
 }
 #container .carousel .center .carousel_wrap .carousel_btn_set .next_btn {
   right: 0;
+}
+#container .brand_story_wrap .bs_wrap {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-top: 1px solid #fff;
+}
+#container .brand_story_wrap .bs_wrap > div {
+  width: 50%;
+}
+#container .brand_story_wrap .bs_wrap .left img {
+  width: 85%;
+  height: 896px;
+}
+#container .brand_story_wrap .bs_wrap .right .brand_text {
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+#container .brand_story_wrap .bs_wrap .right .title {
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+#container .brand_story_wrap .bs_wrap .right .context {
+  font-size: 17px;
+  line-height: 28px;
+}
+#container .brand_story_wrap .bs_wrap .right .context .text1 {
+  padding-bottom: 43px;
+}
+#container .brand_story_wrap .bs_wrap .right .context .text2 {
+  padding-bottom: 43px;
+}
+#container .brand_story_wrap .bs_wrap .right .context .text3 {
+  padding-bottom: 43px;
+}
+#container .brand_story_wrap .bs2 {
+  border-top: none;
 }
 #container .clothes_menu_wrap {
   display: flex;
@@ -1062,9 +1138,18 @@ body {
 }
 #container .clothes_menu_wrap .center .page_list {
   color: #fff;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+#container .clothes_menu_wrap .center .page_list li {
+  margin: 0 17px;
 }
 #container .clothes_menu_wrap .center .page_list li a {
   color: #fff;
+}
+#container .clothes_menu_wrap .center .page_list li.on a {
+  color: #ff8a28;
 }
 #container .store_map_wrap {
   display: flex;
@@ -1453,6 +1538,15 @@ body {
   #container .carousel .center .carousel_wrap .carousel_box {
     width: 266.666%;
   }
+  #container .clothes_menu_wrap .center {
+    width: 95%;
+  }
+  #container .clothes_menu_wrap .center .title {
+    padding-left: 15px;
+  }
+  #container .clothes_menu_wrap .center .list_wrap .list_box {
+    width: 29%;
+  }
 }
 @media screen and (max-width: 1024px) {
   #header .center .logo {
@@ -1559,20 +1653,26 @@ body {
     overflow: hidden;
     white-space: nowrap;
   }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a {
+    margin-top: 50px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .comp_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .comp_name {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .clothes_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .clothes_name {
+    font-size: 23px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .fa-regular, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .fa-regular {
+    font-size: 50px;
+  }
   #container .carousel .title {
     padding: 100px 50px 125px 55px;
   }
   #container .carousel .center .carousel_wrap .carousel_box {
     width: 400%;
-  }
-  #container .clothes_menu_wrap .center {
-    width: 95%;
-  }
-  #container .clothes_menu_wrap .center .title {
-    padding-left: 15px;
-  }
-  #container .clothes_menu_wrap .center .list_wrap .list_box {
-    width: 29%;
   }
 }
 @media screen and (max-width: 930px) {
@@ -1624,6 +1724,17 @@ body {
   }
 }
 @media screen and (max-width: 845px) {
+  #container .clothes_menu_wrap .center {
+    width: 95%;
+  }
+  #container .clothes_menu_wrap .center .title {
+    padding-left: 0;
+    text-align: center;
+  }
+  #container .clothes_menu_wrap .center .list_wrap .list_box {
+    width: 43%;
+    margin: 3%;
+  }
   #container .store_map_wrap .center {
     width: 90%;
   }
@@ -1641,17 +1752,6 @@ body {
 @media screen and (max-width: 768px) {
   #container .carousel .center .carousel_wrap .carousel_box {
     width: 400%;
-  }
-  #container .clothes_menu_wrap .center {
-    width: 95%;
-  }
-  #container .clothes_menu_wrap .center .title {
-    padding-left: 0;
-    text-align: center;
-  }
-  #container .clothes_menu_wrap .center .list_wrap .list_box {
-    width: 43%;
-    margin: 3%;
   }
 }
 @media screen and (max-width: 540px) {
@@ -1720,8 +1820,27 @@ body {
   #container .rolling .rolling_wrap .rolling_img_box {
     width: 800%;
   }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a {
+    margin-top: 20px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .comp_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .comp_name {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .clothes_name, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .clothes_name {
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+  #container .rolling .rolling_wrap .rolling_img_box .img_wrap .hover_bg a .fa-regular, #container .rolling .rolling_wrap .rolling_img_box .clone .hover_bg a .fa-regular {
+    font-size: 42px;
+  }
   #container .carousel .center .carousel_wrap .carousel_box {
     width: 800%;
+  }
+  #container .clothes_menu_wrap .center .list_wrap .list_box {
+    width: 77%;
+    margin: 0 auto 50px;
   }
   #footer .center .info .bar::after {
     left: 0;

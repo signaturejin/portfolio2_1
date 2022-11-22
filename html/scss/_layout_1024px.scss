@@ -117,6 +117,30 @@
                 }
             }
         }
+        //메인페이지 rolling 영역
+        .rolling {
+            .rolling_wrap {
+                .rolling_img_box {
+                    .img_wrap,.clone {
+                        .hover_bg {
+                            a {
+                                margin-top: 50px;
+                                .comp_name {
+                                    font-size: 22px;
+                                    margin-bottom: 30px;
+                                }
+                                .clothes_name {
+                                    font-size: 23px;
+                                    line-height: 38px;
+                                    margin-bottom: 30px;
+                                }
+                                .fa-regular {font-size: 50px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
         //메인페이지 carousel 영역
         .carousel {
             .title {padding: 100px 50px 125px 55px;}
@@ -126,15 +150,6 @@
                 }
             }
         }
-        //메뉴페이지
-        .clothes_menu_wrap {
-            .center {
-                width: 95%;
-                .title {padding-left: 15px;}
-                .list_wrap {
-                    .list_box {width: 29%;}
-                }
-            }
-        }
+        
     }
 }

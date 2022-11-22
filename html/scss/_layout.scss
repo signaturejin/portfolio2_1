@@ -712,9 +712,37 @@
                     100% {transform: translateX(-50%);}
                 }
                 .img_wrap,.clone {
-                    width: 12.5%; padding: 0 0.3%;
+                    width: 12.5%;
+                    margin: 0 0.3%;
+                    // padding: 0 0.3%;
                     box-sizing: border-box;
+                    position: relative;
                     .rolling_img {width: 100%;}
+                    .hover_bg {
+                        opacity: 0;
+                        position: absolute; left: 0; top: 0;
+                        width: 100%; height: 100%;
+                        background-color: rgba(0,0,0,0.7);
+                        text-align: center;
+                        transition: all 0.5s;
+                        a {
+                            color: #fff; display: block;
+                            margin-top: 120px;
+                            .comp_name {
+                                font-size: 22px;
+                                margin-bottom: 30px;
+                            }
+                            .clothes_name {
+                                font-size: 23px;
+                                line-height: 38px;
+                                margin-bottom: 30px;
+                            }
+                            .fa-regular {font-size: 50px;}
+                        }
+                    }
+                    &:hover {
+                        .hover_bg {opacity: 1;}
+                    }
                 }
             }
             .rolling_img_box:hover {
@@ -737,6 +765,13 @@
                         width: 12.5%; box-sizing: border-box;
                         padding: 0 0.7%;
                         img {width: 100%;}
+                        .info_text {
+                            a {
+                                color: #000; display: block;
+                                padding-top: 10px;
+                                line-height: 22px; 
+                            }
+                        }
                     }
                 }
                 .carousel_btn_set {
@@ -753,6 +788,43 @@
                 }
             }
         }
+    }
+    //브랜드스토리 페이지
+    .brand_story_wrap {
+        .bs_wrap {
+            display: flex; align-items: center;
+            color: #fff;
+            background-color: #000;
+            border-top: 1px solid #fff;
+            > div {width: 50%;}
+            .left {
+                img {width: 85%; height: 896px;}
+            }
+            .right {
+                .brand_text {
+                    font-size: 26px;
+                    padding-bottom: 10px;
+                }
+                .title {
+                    font-size: 32px;
+                    padding-bottom: 50px;
+                }
+                .context {
+                    font-size: 17px;
+                    line-height: 28px;
+                    .text1 {
+                        padding-bottom: 43px;
+                    }
+                    .text2 {
+                        padding-bottom: 43px;
+                    }
+                    .text3 {
+                        padding-bottom: 43px;
+                    }
+                }
+            }
+        }
+        .bs2 {border-top: none;}
     }
     //메뉴페이지
     .clothes_menu_wrap {
@@ -823,9 +895,14 @@
                 }
             }
             .page_list {
-                color: #fff;
+                color: #fff; margin-top: 80px;
+                display: flex; justify-content: center;
                 li {
+                    margin: 0 17px;
                     a {color: #fff;}
+                }
+                li.on {
+                    a {color: #ff8a28;}
                 }
             }
         }

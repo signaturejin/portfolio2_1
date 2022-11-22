@@ -1,5 +1,15 @@
 @media screen and (max-width:845px) {
     #container {
+        //메뉴페이지
+        .clothes_menu_wrap {
+            .center {
+                width: 95%;
+                .title {padding-left: 0; text-align: center;}
+                .list_wrap {
+                    .list_box {width: 43%; margin: 3%;}
+                }
+            }
+        }
         // 매장위치 페이지
         .store_map_wrap {
             .center {

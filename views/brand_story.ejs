@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브랜드 스토리</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 웹폰트 및 아이콘 -->
+    <%- include("common/icon_font.ejs") %>
+</head>
+<body>
+    <!-- 상단 영역 -->
+    <%- include("common/header.ejs",{change:"main", logo:"logo_white.png"}); %>
+    <!-- 중간 영역 -->
+    <div id="container">
+        <div class="brand_story_wrap">
+            <div class="bs_wrap">
+                <div class="left">
+                    <img src="/img/brand_story_img1.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p class="brand_text">브랜드스토리</p>
+                    <h2 class="title">모든 것을 담은 쇼핑몰의 이야기</h2>
+                    <div class="context">
+                        <p class="text1">
+                            원하는 옷을 고르기 위해<br>
+                            시간을 들여 돌아다니던 우리들
+                        </p>
+                        <p class="text2">
+                            이제는 여기,<br>
+                            ANYTHING에서.
+                        </p>
+                        <p class="text3">
+                            다양한 디자인과 여러 소품들,<br>
+                            날마다 다른 스타일링을 보여주는 곳.
+                        </p>
+                        <p class="text4">
+                            ANYTHING
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bs_wrap bs2">
+                <div class="left">
+                    <img src="/img/brand_story_img2.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p class="brand_text">브랜드스토리</p>
+                    <h2 class="title">모든 것을 담은 쇼핑몰의 이야기</h2>
+                    <div class="context">
+                        <p class="text1">
+                            원하는 옷을 고르기 위해<br>
+                            시간을 들여 돌아다니던 우리들
+                        </p>
+                        <p class="text2">
+                            이제는 여기,<br>
+                            ANYTHING에서.
+                        </p>
+                        <p class="text3">
+                            다양한 디자인과 여러 소품들,<br>
+                            날마다 다른 스타일링을 보여주는 곳.
+                        </p>
+                        <p class="text4">
+                            ANYTHING
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="brand_video">
+                <!-- 비디오 넣기 -->
+            </div>
+        </div>
+    </div>
+    <!-- 하단 영역 -->
+    <%- include("common/footer.ejs",{change:"black_ver", logo:"logo_white.png"}); %>
+    <!-- 맨 위로 가는 태그영역 -->
+    <%- include("common/go_top.ejs") %>
+</body>
+</html>

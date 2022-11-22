@@ -104,18 +104,15 @@ passport.deserializeUser(function (admin_id, done) {
     });
 });
 
-// 메인페이지 경로 요청
+//메인페이지 경로 요청
 app.get("/",(req,res)=>{
     res.render("index");
 });
 
-// 메뉴페이지 경로요청
-// 상의
-// app.get("/menu/top",(req,res)=>{
-//     db.collection("prdlist").find({prd_category:"상의"}).toArray((err,f_result)=>{
-//         res.render("shop_menu", {prdData: f_result});
-//     });
-// });
+//브랜드 스토리 페이지 경로 요청
+app.get("/brand_story",(req,res)=>{
+    res.render("brand_story");
+});
 
 //메뉴페이지 경로요청
 //async / await -> 동기화작업
@@ -190,7 +187,7 @@ app.get("/menu/top",async(req,res)=>{
 app.get("/menu/outer",async(req,res)=>{
     let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
     let per_page = 4;
-    let block_count = 2;
+    let block_count = 3;
     let block_number = Math.ceil(page_number / block_count);
     let block_start = ((block_number -1) * block_count) + 1;
     let block_end = block_start + block_count - 1;
@@ -218,7 +215,7 @@ app.get("/menu/outer",async(req,res)=>{
 app.get("/menu/bottom",async(req,res)=>{
     let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
     let per_page = 4;
-    let block_count = 2;
+    let block_count = 3;
     let block_number = Math.ceil(page_number / block_count);
     let block_start = ((block_number -1) * block_count) + 1;
     let block_end = block_start + block_count - 1;
@@ -246,7 +243,7 @@ app.get("/menu/bottom",async(req,res)=>{
 app.get("/menu/shoes",async(req,res)=>{
     let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
     let per_page = 4;
-    let block_count = 2;
+    let block_count = 3;
     let block_number = Math.ceil(page_number / block_count);
     let block_start = ((block_number -1) * block_count) + 1;
     let block_end = block_start + block_count - 1;
@@ -274,7 +271,7 @@ app.get("/menu/shoes",async(req,res)=>{
 app.get("/menu/cap",async(req,res)=>{
     let page_number = (req.query.page == null) ? 1 : Number(req.query.page);
     let per_page = 4;
-    let block_count = 2;
+    let block_count = 3;
     let block_number = Math.ceil(page_number / block_count);
     let block_start = ((block_number -1) * block_count) + 1;
     let block_end = block_start + block_count - 1;

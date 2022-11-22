@@ -113,5 +113,15 @@
                 }
             }
         }
+        //메뉴페이지
+        .clothes_menu_wrap {
+            .center {
+                width: 95%;
+                .title {padding-left: 15px;}
+                .list_wrap {
+                    .list_box {width: 29%;}
+                }
+            }
+        }
     }
 }
