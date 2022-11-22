@@ -434,3 +434,48 @@ app.get("/store/name_search",(req,res)=>{
     });
 
 });
+
+//관리자 라이프 등록 경로 요청
+app.get("/admin/life",(req,res)=>{
+    db.collection("lifelist").find().toArray((err,result)=>{
+        res.render("admin_life",{lifeData:result});
+    });
+});
+
+//관리자 라이프 관련 데이터 db에 보내기
+app.post("/add/life",upload.single("life_img"),(req,res)=>{
+    // 파일을 첨부하였을 때
+    if(req.file){
+        life_file = req.file.originalname;
+    }
+    // 파일이 없을 때
+    else{
+        life_file = null;
+    }
+
+    db.collection("count").findOne({name:"라이프등록"},(err,result)=>{
+        db.collection("lifelist").insertOne({
+            life_no: result.lifeCount + 1,
+            life_file: life_file,
+            life_title: req.body.life_title,
+            life_date1: req.body.life_date1,
+            life_date2: req.body.life_date2
+        },(err,result)=>{
+            db.collection("count").updateOne({name:"라이프등록"},{$inc:{lifeCount:1}},(err,result)=>{
+                res.redirect("/admin/life");
+            });
+        });
+    });
+});
+
+//라이프 경로 요청
+app.get("/life",(req,res)=>{
+    db.collection("lifelist").find().toArray((err,result)=>{
+        res.render("shop_life",{lifeData:result});
+    });
+});
+
+// 2022.11.23 해야 할 것
+// 1. shop_life.ejs 반응형
+// 2. brand_story.ejs 비디오 첨부
+// 3. brand_story.ejs 반응형

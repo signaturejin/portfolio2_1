@@ -826,7 +826,7 @@
         }
         .bs2 {border-top: none;}
     }
-    //메뉴페이지
+    //메뉴 페이지
     .clothes_menu_wrap {
         display: flex; justify-content: center;
         background-color: #000; padding-bottom: 100px;
@@ -903,6 +903,35 @@
                 }
                 li.on {
                     a {color: #ff8a28;}
+                }
+            }
+        }
+    }
+    //라이프 페이지
+    .life {
+        display: flex; justify-content: center;
+        padding-bottom: 100px;
+        background-color: #000;
+        .center {
+            width: 80%;
+            > .title {padding: 110px 0 70px; font-size: 50px; color: #fff;}
+            .life_wrap {
+                display: flex; flex-wrap: wrap;
+                .life_box {
+                    width: 22%; margin: 0 1%;
+                    margin-bottom: 50px;
+                    a {
+                        color: #fff;
+                        .life_img {width: 100%; border-radius: 25px;}
+                        .title {
+                            padding-top: 15px; font-size: 21px;
+                            line-height: 25px;
+                        }
+                        .date {
+                            padding-top: 20px; color: #b3b3b3;
+                            font-size: 14px;
+                        }
+                    }
                 }
             }
         }
@@ -1013,6 +1042,20 @@
     #store_form {
         input {display: block; margin-bottom: 30px;}
         #sample6_detailAddress,#sample6_extraAddress {display: none;}
+    }
+}
+
+//관리자 라이프관리페이지
+#admin_life_wrap {
+    .life_wrap {
+        margin-top: 50px;
+        display: flex; flex-wrap: wrap;
+        .box {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            width: 23%; margin: 0 1%;
+            img {width: 100%; height: 250px;}
+        }
     }
 }
 

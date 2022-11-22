@@ -1151,6 +1151,46 @@ body {
 #container .clothes_menu_wrap .center .page_list li.on a {
   color: #ff8a28;
 }
+#container .life {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  background-color: #000;
+}
+#container .life .center {
+  width: 80%;
+}
+#container .life .center > .title {
+  padding: 110px 0 70px;
+  font-size: 50px;
+  color: #fff;
+}
+#container .life .center .life_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#container .life .center .life_wrap .life_box {
+  width: 22%;
+  margin: 0 1%;
+  margin-bottom: 50px;
+}
+#container .life .center .life_wrap .life_box a {
+  color: #fff;
+}
+#container .life .center .life_wrap .life_box a .life_img {
+  width: 100%;
+  border-radius: 25px;
+}
+#container .life .center .life_wrap .life_box a .title {
+  padding-top: 15px;
+  font-size: 21px;
+  line-height: 25px;
+}
+#container .life .center .life_wrap .life_box a .date {
+  padding-top: 20px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
 #container .store_map_wrap {
   display: flex;
   justify-content: center;
@@ -1287,6 +1327,22 @@ body {
 }
 #admin_store_page #store_form #sample6_detailAddress, #admin_store_page #store_form #sample6_extraAddress {
   display: none;
+}
+
+#admin_life_wrap .life_wrap {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#admin_life_wrap .life_wrap .box {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  width: 23%;
+  margin: 0 1%;
+}
+#admin_life_wrap .life_wrap .box img {
+  width: 100%;
+  height: 250px;
 }
 
 #footer {

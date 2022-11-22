@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이프 | ANYTHING</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 웹폰트 및 아이콘 -->
+    <%- include("common/icon_font.ejs") %>
+</head>
+<body>
+    <!-- 상단 영역 -->
+    <%- include("common/header.ejs",{change:"notmain", logo:"logo_black.png"}); %>
+    <!-- 중간 영역 -->
+    <div id="container">
+        <div class="life">
+            <div class="center">
+                <h2 class="title">LIFE</h2>
+                <div class="life_wrap">
+                    <% for(let i=0; i<lifeData.length; i++){ %>
+                        <div class="life_box">
+                            <a href="#">
+                                <img class="life_img" src="/upload/<%- lifeData[i].life_file %>" alt="">
+                                <h2 class="title"><%- lifeData[i].life_title %></h2>
+                                <p class="date"><%- lifeData[i].life_date1 %><span>~</span><%- lifeData[i].life_date2 %></p>
+                            </a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 하단 영역 -->
+    <%- include("common/footer.ejs",{change:"white_ver", logo:"logo_black.png"}); %>
+    <!-- 맨 위로 가는 태그영역 -->
+    <%- include("common/go_top.ejs") %>
+</body>
+</html>

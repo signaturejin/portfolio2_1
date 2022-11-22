@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 라이프 등록 페이지</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 웹폰트 및 아이콘 -->
+    <%- include("common/icon_font.ejs") %>
+</head>
+<body>
+    <div id="admin_life_wrap">
+        <form id="life_form" action="/add/life" method="post" enctype="multipart/form-data">
+            <label for="life_img">라이프 이미지</label>
+            <input type="file" class="life_img" name="life_img">
+            
+            <label for="life_title">라이프 제목</label>
+            <input type="text" class="life_title" name="life_title">
+
+            <label for="life_date1">라이프 기간1</label>
+            <input type="text" class="life_date1" name="life_date1">
+
+            <span>~</span>
+
+            <label for="life_date2">라이프 기간2</label>
+            <input type="text" class="life_date2" name="life_date2">
+
+            <button type="submit">등록</button>
+        </form>
+        <div class="life_wrap">
+            <% for(let i=0; i<lifeData.length; i++){ %>
+                <div class="box">
+                    <img class="file_img" src="/upload/<%- lifeData[i].life_file %>" alt="">
+                    <h2 class="title"><%- lifeData[i].life_title %></h2>
+                    <p class="date"><%- lifeData[i].life_date1 %><span> ~ </span><%- lifeData[i].life_date2 %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
