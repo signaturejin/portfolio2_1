@@ -123,5 +123,14 @@
                 }
             }
         }
+        //라이프 페이지
+        .life {
+            .center {
+                width: 95%;
+                .life_wrap {
+                    .life_box {width: 31%; margin: 2% 1%;}
+                }
+            }
+        }
     }
 }

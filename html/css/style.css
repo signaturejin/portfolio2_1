@@ -962,6 +962,7 @@ body {
   display: block;
   padding-top: 10px;
   line-height: 22px;
+  font-weight: 500;
 }
 #container .carousel .center .carousel_wrap .carousel_btn_set > div {
   position: absolute;
@@ -999,29 +1000,32 @@ body {
   width: 85%;
   height: 896px;
 }
-#container .brand_story_wrap .bs_wrap .right .brand_text {
+#container .brand_story_wrap .bs_wrap .right .inner_left .brand_text {
   font-size: 26px;
   padding-bottom: 10px;
 }
-#container .brand_story_wrap .bs_wrap .right .title {
+#container .brand_story_wrap .bs_wrap .right .inner_left .title {
   font-size: 32px;
   padding-bottom: 50px;
 }
-#container .brand_story_wrap .bs_wrap .right .context {
+#container .brand_story_wrap .bs_wrap .right .inner_right .context {
   font-size: 17px;
   line-height: 28px;
 }
-#container .brand_story_wrap .bs_wrap .right .context .text1 {
-  padding-bottom: 43px;
-}
-#container .brand_story_wrap .bs_wrap .right .context .text2 {
-  padding-bottom: 43px;
-}
-#container .brand_story_wrap .bs_wrap .right .context .text3 {
+#container .brand_story_wrap .bs_wrap .right .inner_right .context .text1, #container .brand_story_wrap .bs_wrap .right .inner_right .context .text2, #container .brand_story_wrap .bs_wrap .right .inner_right .context .text3 {
   padding-bottom: 43px;
 }
 #container .brand_story_wrap .bs2 {
   border-top: none;
+}
+#container .brand_story_wrap .brand_video {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 150px 0 250px;
+}
+#container .brand_story_wrap .brand_video video {
+  width: 68%;
 }
 #container .clothes_menu_wrap {
   display: flex;
@@ -1603,6 +1607,13 @@ body {
   #container .clothes_menu_wrap .center .list_wrap .list_box {
     width: 29%;
   }
+  #container .life .center {
+    width: 95%;
+  }
+  #container .life .center .life_wrap .life_box {
+    width: 31%;
+    margin: 2% 1%;
+  }
 }
 @media screen and (max-width: 1024px) {
   #header .center .logo {
@@ -1780,6 +1791,42 @@ body {
   }
 }
 @media screen and (max-width: 845px) {
+  #container .brand_story_wrap .bs_wrap {
+    flex-direction: column;
+  }
+  #container .brand_story_wrap .bs_wrap > div {
+    width: 100%;
+  }
+  #container .brand_story_wrap .bs_wrap .left img {
+    width: 100%;
+    height: 650px;
+  }
+  #container .brand_story_wrap .bs_wrap .right {
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+  }
+  #container .brand_story_wrap .bs_wrap .right > div {
+    width: 50%;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left {
+    padding-left: 30px;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left .brand_text {
+    font-size: 21px;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left .title {
+    font-size: 28px;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_right {
+    padding-left: 50px;
+  }
+  #container .brand_story_wrap .brand_video {
+    padding: 50px 0 200px;
+  }
+  #container .brand_story_wrap .brand_video video {
+    width: 85%;
+  }
   #container .clothes_menu_wrap .center {
     width: 95%;
   }
@@ -1790,6 +1837,9 @@ body {
   #container .clothes_menu_wrap .center .list_wrap .list_box {
     width: 43%;
     margin: 3%;
+  }
+  #container .life .center .life_wrap .life_box {
+    width: 48%;
   }
   #container .store_map_wrap .center {
     width: 90%;
@@ -1894,9 +1944,42 @@ body {
   #container .carousel .center .carousel_wrap .carousel_box {
     width: 800%;
   }
+  #container .brand_story_wrap .bs_wrap .left img {
+    height: 600px;
+  }
+  #container .brand_story_wrap .bs_wrap .right {
+    flex-direction: column;
+    text-align: center;
+  }
+  #container .brand_story_wrap .bs_wrap .right > div {
+    width: 100%;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left {
+    padding-left: 0;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left .brand_text {
+    font-size: 21px;
+    margin-bottom: 14px;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_left .title {
+    font-size: 32px;
+  }
+  #container .brand_story_wrap .bs_wrap .right .inner_right {
+    padding-left: 0;
+  }
+  #container .brand_story_wrap .brand_video {
+    padding: 30px 0 150px;
+  }
+  #container .brand_story_wrap .brand_video video {
+    width: 90%;
+  }
   #container .clothes_menu_wrap .center .list_wrap .list_box {
     width: 77%;
     margin: 0 auto 50px;
+  }
+  #container .life .center .life_wrap .life_box {
+    width: 98%;
+    margin-bottom: 50px;
   }
   #footer .center .info .bar::after {
     left: 0;

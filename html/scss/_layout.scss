@@ -769,7 +769,8 @@
                             a {
                                 color: #000; display: block;
                                 padding-top: 10px;
-                                line-height: 22px; 
+                                line-height: 22px;
+                                font-weight: 500;
                             }
                         }
                     }
@@ -801,30 +802,34 @@
                 img {width: 85%; height: 896px;}
             }
             .right {
-                .brand_text {
-                    font-size: 26px;
-                    padding-bottom: 10px;
-                }
-                .title {
-                    font-size: 32px;
-                    padding-bottom: 50px;
-                }
-                .context {
-                    font-size: 17px;
-                    line-height: 28px;
-                    .text1 {
-                        padding-bottom: 43px;
+                .inner_left {
+                    .brand_text {
+                        font-size: 26px;
+                        padding-bottom: 10px;
                     }
-                    .text2 {
-                        padding-bottom: 43px;
+                    .title {
+                        font-size: 32px;
+                        padding-bottom: 50px;
                     }
-                    .text3 {
-                        padding-bottom: 43px;
+                }
+                .inner_right {
+                    .context {
+                        font-size: 17px;
+                        line-height: 28px;
+                        .text1,.text2,.text3 {
+                            padding-bottom: 43px;
+                        }
                     }
                 }
             }
         }
         .bs2 {border-top: none;}
+        .brand_video {
+            display: flex; justify-content: center;
+            background-color: #000;
+            padding: 150px 0 250px;
+            video {width: 68%;}
+        }
     }
     //메뉴 페이지
     .clothes_menu_wrap {

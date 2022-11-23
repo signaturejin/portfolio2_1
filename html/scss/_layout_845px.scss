@@ -1,5 +1,30 @@
 @media screen and (max-width:845px) {
     #container {
+        //브랜드스토리 페이지
+        .brand_story_wrap {
+            .bs_wrap {
+                flex-direction: column;
+                > div {width: 100%;}
+                .left {
+                    img {width: 100%; height: 650px;}
+                }
+                .right {
+                    display: flex; align-items: center;
+                    padding: 90px 0;
+                    > div {width: 50%;}
+                    .inner_left {
+                        padding-left: 30px;
+                        .brand_text {font-size: 21px;}
+                        .title {font-size: 28px;}
+                    }
+                    .inner_right {padding-left: 50px;}
+                }
+            }
+            .brand_video {
+                padding: 50px 0 200px;
+                video {width: 85%;}
+            }
+        }
         //메뉴페이지
         .clothes_menu_wrap {
             .center {
@@ -7,6 +32,14 @@
                 .title {padding-left: 0; text-align: center;}
                 .list_wrap {
                     .list_box {width: 43%; margin: 3%;}
+                }
+            }
+        }
+        //라이프 페이지
+        .life {
+            .center {
+                .life_wrap {
+                    .life_box {width: 48%;}
                 }
             }
         }

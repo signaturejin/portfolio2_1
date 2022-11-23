@@ -101,11 +101,42 @@
                 }
             }
         }
+        //브랜드스토리 페이지
+        .brand_story_wrap {
+            .bs_wrap {
+                .left {
+                    img {height: 600px;}
+                }
+                .right {
+                    flex-direction: column;
+                    text-align: center;
+                    > div {width: 100%;}
+                    .inner_left {
+                        padding-left: 0;
+                        .brand_text {font-size: 21px; margin-bottom: 14px;}
+                        .title {font-size: 32px;}
+                    }
+                    .inner_right {padding-left: 0;}
+                }
+            }
+            .brand_video {
+                padding: 30px 0 150px;
+                video {width: 90%;}
+            }
+        }
         //메뉴페이지
         .clothes_menu_wrap {
             .center {
                 .list_wrap {
                     .list_box {width: 77%; margin: 0 auto 50px;}
+                }
+            }
+        }
+        //라이프 페이지
+        .life {
+            .center {
+                .life_wrap {
+                    .life_box {width: 98%; margin-bottom: 50px;}
                 }
             }
         }

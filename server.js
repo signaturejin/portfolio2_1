@@ -474,8 +474,3 @@ app.get("/life",(req,res)=>{
         res.render("shop_life",{lifeData:result});
     });
 });
-
-// 2022.11.23 해야 할 것
-// 1. shop_life.ejs 반응형
-// 2. brand_story.ejs 비디오 첨부
-// 3. brand_story.ejs 반응형
