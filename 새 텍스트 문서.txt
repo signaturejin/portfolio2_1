@@ -1,5 +1,0 @@
-전체배경 bisque
-글자배경 및 테두리 orangered
-
-다른 영역 전체배경 coral
-글자색 white
