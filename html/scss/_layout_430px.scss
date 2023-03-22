@@ -1,0 +1,71 @@
+@media screen and (max-width: 430px) {
+    //중간영역
+    #container {
+        //slide 영역
+        .slide_wrap {
+            .slide {
+                .view {
+                    .slide_box {
+                        .text_box {font-size: 21px;}
+                        &:last-child {
+                            .text_box {font-size: 23px; line-height: 35px;}
+                        }
+                    }
+                }
+                .mouse_icon {display: none;}
+            }
+        }
+        //menu_tab 영역
+        .menu_tab {
+            .center {
+                .menu_box {width: 45%;}
+                .right {
+                    height: 1560px;
+                    .right_box {
+                        .menu_title {margin-top: 30px;}
+                        .text {margin-bottom: 50px;}
+                        .menu_img_wrap {
+                            flex-direction: column;
+                            .menu_img {width: 100%; margin-bottom: 30px;}
+                        }
+                        .right_bot {
+                            .bot_box_wrap {
+                                flex-wrap: wrap;
+                                .bot_box {width: 47%; margin-right: 0;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //inner 영역
+        .inner {margin-top: 1220px;}
+        //count 영역
+        .count {
+            .left {
+                .title {
+                    font-size: 30px;
+                    line-height: 45px;
+                    padding: 70px 0 30px;
+                }
+                .text {font-size: 13px; line-height: 22px;}
+                .count_wrap {
+                    .count_box {
+                        .count_view {
+                            .count_num {font-size: 27px;}
+                        }
+                    }
+                }
+            }
+        }
+        //서브 상품 페이지
+        .clothes_menu_wrap {
+            .center {
+                .menu_list {
+                    li {font-size: 20px;}
+                }
+            }
+        }
+    }
+
+}
