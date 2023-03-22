@@ -27,6 +27,7 @@
                         .menu_img_wrap {
                             flex-direction: column;
                             .menu_img {width: 100%; margin-bottom: 30px;}
+                            .menu_img.covernat {width: 100%; margin-bottom: 30px;}
                         }
                         .right_bot {
                             .bot_box_wrap {
@@ -48,7 +49,7 @@
                     line-height: 45px;
                     padding: 70px 0 30px;
                 }
-                .text {font-size: 13px; line-height: 22px;}
+                .text {font-size: 15px; line-height: 25px;}
                 .count_wrap {
                     .count_box {
                         .count_view {

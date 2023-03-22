@@ -2071,6 +2071,10 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     margin-bottom: 30px;
   }
+  #container .menu_tab .center .right .right_box .menu_img_wrap .menu_img.covernat {
+    width: 100%;
+    margin-bottom: 30px;
+  }
   #container .menu_tab .center .right .right_box .right_bot .bot_box_wrap {
     flex-wrap: wrap;
   }
@@ -2087,8 +2091,8 @@ body::-webkit-scrollbar-thumb {
     padding: 70px 0 30px;
   }
   #container .count .left .text {
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 25px;
   }
   #container .count .left .count_wrap .count_box .count_view .count_num {
     font-size: 27px;
