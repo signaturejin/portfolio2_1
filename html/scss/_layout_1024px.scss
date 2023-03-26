@@ -35,7 +35,7 @@
             .center {
                 height: 850px;
                 flex-wrap: wrap;
-                > div {width: 100%;}
+                > div,figure {width: 100%;}
                 .menu_box {
                     width: 18%; left: 3%; top: 55px;
                     .title { font-size: 50px; padding-bottom: 50px;}

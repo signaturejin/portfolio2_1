@@ -370,7 +370,7 @@
             height: 900px;
             display: flex;
             position: relative;
-            > div {width: 50%;}
+            > div,figure {width: 50%;}
             .menu_box {
                 position: absolute; left: 4.5%; top: 95px;
                 z-index: 98;
@@ -426,12 +426,14 @@
                 z-index: 96;
                 background-color: #fff;
                 .right_box{
+                    width: 100%;
                     display: none;
                     padding: 107px 60px 0 240px;
                     box-sizing: border-box;
                     position: absolute; left: 0; top: 0;
                     transition: all 0.5s;
                     .menu_img_wrap {
+                        width: 100%;
                         display: flex;
                         .menu_img {
                             width: 31%; height: 190px;
@@ -459,7 +461,7 @@
                         .bot_box_wrap {
                             display: flex;
                             .bot_box {
-                                width: 16%; text-align: center;
+                                width: 22%; text-align: center;
                                 margin-right: 12px;
                                 .menu_bot_img {
                                     display: block; margin: 0 auto 20px;
@@ -1127,7 +1129,7 @@
         .info {
             text-align: center;
             .wrap {
-                p {display: inline;}
+                p,address {display: inline;}
                 .wrap_930 {display: inline;}
                 &:first-child {margin-bottom: 5px;}
             }

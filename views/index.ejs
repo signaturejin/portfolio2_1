@@ -16,31 +16,21 @@
     <!-- 상단 영역 -->
     <%- include("common/header.ejs",{change:"main", logo:"logo_white.png"}); %>
     <!-- 중간 영역 -->
-    <div id="container">
+    <main id="container">
         <!-- slide 영역 -->
-        <!-- 자동함수 사용하여 자동기능수행 -->
-        <div class="slide_wrap">
+        <section class="slide_wrap">
             <div class="slide">
                 <div class="view">
                     <div class="slide_box">
-                        <div class="text_box">
-                            22FW AUTUMN-WINTER<br>
-                            COLLECTION<br>
+                        <div class="text_box">22FW AUTUMN-WINTER<br>COLLECTION</div>
+                    </div>
+                    <div class="slide_box">
+                        <div class="text_box">우리가 함께하는 공간
+                            <p class="sub_title">너만의 스타일을 펼쳐봐</p>
                         </div>
                     </div>
                     <div class="slide_box">
-                        <div class="text_box">
-                            우리가 함께하는 공간
-                            <p class="sub_title">
-                                너만의 스타일을 펼쳐봐
-                            </p>
-                        </div>
-                    </div>
-                    <div class="slide_box">
-                        <div class="text_box">
-                            Anything<br>
-                            Sports Club
-                        </div>
+                        <div class="text_box">Anything<br>Sports Club</div>
                     </div>
                 </div>
                 <div class="mouse_icon">
@@ -58,9 +48,9 @@
                     <li class="slide_btn"><a href="#"></a></li>
                 </ul>
             </div>
-        </div>
+        </section>
         <!-- menu_tab 영역 -->
-        <div class="menu_tab">
+        <section class="menu_tab">
             <div class="center">
                 <div class="menu_box">
                     <h2 class="title">매거진</h2>
@@ -71,149 +61,149 @@
                         <li><a href="#">YALE</a></li>
                     </ul>
                 </div>
-                <div class="center_img_wrap">
+                <figure class="center_img_wrap">
                     <!-- on 기능 -->
-                    <img class="center_img on" src="/img/center_img1.jpg" alt="">
-                    <img class="center_img" src="/img/center_img2.jpg" alt="">
-                    <img class="center_img" src="/img/center_img3.jpg" alt="">
-                    <img class="center_img" src="/img/center_img4.jpg" alt="">
-                </div>
+                    <img class="center_img on" src="/img/center_img1.jpg" alt="MLB 가방">
+                    <img class="center_img" src="/img/center_img2.jpg" alt="Lee 가방">
+                    <img class="center_img" src="/img/center_img3.jpg" alt="Covernat 가방">
+                    <img class="center_img" src="/img/center_img4.jpg" alt="Yale 가방">
+                </figure>
                 <!-- on 기능 -->
-                <div class="left">
+                <figure class="left">
                     <!-- left바탕 -->
                     <div class="left_bg"></div>
-                    <img class="left_img on" src="/img/tab_img1.jpg" alt="">
-                    <img class="left_img" src="/img/tab_img2.jpg" alt="">
-                    <img class="left_img" src="/img/tab_img3.jpg" alt="">
-                    <img class="left_img" src="/img/tab_img4.jpg" alt="">
-                </div>
+                    <img class="left_img on" src="/img/tab_img1.jpg" alt="MLB">
+                    <img class="left_img" src="/img/tab_img2.jpg" alt="LEE">
+                    <img class="left_img" src="/img/tab_img3.jpg" alt="COVERNAT">
+                    <img class="left_img" src="/img/tab_img4.jpg" alt="YALE">
+                </figure>
                 <div class="right">
                     <!-- on 기능 -->
                     <div class="right_box on">
                         <h3 class="menu_title">MLB</h3>
                         <p class="text">Young Generation의 패션 아이콘<br>스트릿 캐주얼 브랜드</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/menu_img1-1.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img1-2.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img1-3.jpg" alt="">
-                        </div>
+                        <figure class="menu_img_wrap">
+                            <img class="menu_img" src="/img/menu_img1-1.jpg" alt="MLB 모델">
+                            <img class="menu_img" src="/img/menu_img1-2.jpg" alt="MLB 모델">
+                            <img class="menu_img" src="/img/menu_img1-3.jpg" alt="MLB 모델">
+                        </figure>
                         <div class="right_bot">
                             <p class="bot_title">믹스 매치 아이템</p>
                             <div class="bot_box_wrap">
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img1-1.jpg" alt="">
-                                    <p class="text">뉴젤리비니</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img//menu_bot_img1-2.jpg" alt="">
-                                    <p class="text">청키 라이너</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img//menu_bot_img1-3.jpg" alt="">
-                                    <p class="text">링잉 로고</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img//menu_bot_img1-4.jpg" alt="">
-                                    <p class="text">벨벳 크롭</p>
-                                </div>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img1-1.jpg" alt="뉴젤리비니">
+                                    <figcaption class="text">뉴젤리비니</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img//menu_bot_img1-2.jpg" alt="청키 라이너">
+                                    <figcaption class="text">청키 라이너</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img//menu_bot_img1-3.jpg" alt="링잉 로고">
+                                    <figcaption class="text">링잉 로고</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img//menu_bot_img1-4.jpg" alt="벨벳 크롭">
+                                    <figcaption class="text">벨벳 크롭</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                     <div class="right_box">
                         <h3 class="menu_title">LEE</h3>
                         <p class="text">전통적으로 견고함과 실용성을 강조한<br>130년 역사를 지닌 브랜드</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/menu_img2-1.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img2-2.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img2-3.jpg" alt="">
-                        </div>
+                        <figure class="menu_img_wrap">
+                            <img class="menu_img" src="/img/menu_img2-1.jpg" alt="LEE 모델">
+                            <img class="menu_img" src="/img/menu_img2-2.jpg" alt="LEE 모델">
+                            <img class="menu_img" src="/img/menu_img2-3.jpg" alt="LEE 모델">
+                        </figure>
                         <div class="right_bot">
                             <p class="bot_title">믹스 매치 아이템</p>
                             <div class="bot_box_wrap">
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img2-1.jpg" alt="">
-                                    <p class="text">바라클라바</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img2-2.jpg" alt="">
-                                    <p class="text">로고 랩탑</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img2-3.jpg" alt="">
-                                    <p class="text">트위치 로고</p>
-                                </div>
-                                <div class="bot_box">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img2-4.jpg" alt="">
-                                    <p class="text">코듀로이</p>
-                                </div>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img2-1.jpg" alt="바라클라바">
+                                    <figcaption class="text">바라클라바</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img2-2.jpg" alt="로고 랩탑">
+                                    <figcaption class="text">로고 랩탑</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img2-3.jpg" alt="트위치 로고">
+                                    <figcaption class="text">트위치 로고</figcaption>
+                                </figure>
+                                <figure class="bot_box">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img2-4.jpg" alt="코듀로이">
+                                    <figcaption class="text">코듀로이</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                     <div class="right_box">
                         <h3 class="menu_title">COVERNAT</h3>
                         <p class="text">빈티지웨어에서 얻은 모티브를 현대적인 소재와<br>룩으로 푸는 컨템퍼러리 브랜드</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img covernat" src="/img/menu_img3-1.jpg" alt="">
-                            <img class="menu_img covernat" src="/img/menu_img3-2.jpg" alt="">
-                            <img class="menu_img covernat" src="/img/menu_img3-3.jpg" alt="">
-                        </div>
+                        <figure class="menu_img_wrap">
+                            <img class="menu_img covernat" src="/img/menu_img3-1.jpg" alt="COVERNAT 모델">
+                            <img class="menu_img covernat" src="/img/menu_img3-2.jpg" alt="COVERNAT 모델">
+                            <img class="menu_img covernat" src="/img/menu_img3-3.jpg" alt="COVERNAT 모델">
+                        </figure>
                         <div class="right_bot">
                             <p class="bot_title">믹스 매치 아이템</p>
                             <div class="bot_box_wrap">
-                                <div class="bot_box covernat">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img3-1.jpg" alt="">
-                                    <p class="text">로고 체인</p>
-                                </div>
-                                <div class="bot_box covernat">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img3-2.jpg" alt="">
-                                    <p class="text">워치 스트랩</p>
-                                </div>
-                                <div class="bot_box covernat">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img3-3.jpg" alt="">
-                                    <p class="text">코듀로이</p>
-                                </div>
-                                <div class="bot_box covernat">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img3-4.jpg" alt="">
-                                    <p class="text">시어링 미니</p>
-                                </div>
+                                <figure class="bot_box covernat">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img3-1.jpg" alt="로고 체인">
+                                    <figcaption class="text">로고 체인</figcaption>
+                                </figure>
+                                <figure class="bot_box covernat">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img3-2.jpg" alt="워치 스트랩">
+                                    <figcaption class="text">워치 스트랩</figcaption>
+                                </figure>
+                                <figure class="bot_box covernat">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img3-3.jpg" alt="코듀로이">
+                                    <figcaption class="text">코듀로이</figcaption>
+                                </figure>
+                                <figure class="bot_box covernat">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img3-4.jpg" alt="시어링 미니">
+                                    <figcaption class="text">시어링 미니</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                     <div class="right_box">
                         <h3 class="menu_title">YALE</h3>
                         <p class="text">미국 명문 사립대학의 시그니처 패션을<br>선보이는 빈티지웨어 브랜드</p>
-                        <div class="menu_img_wrap">
-                            <img class="menu_img" src="/img/menu_img4-1.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img4-2.jpg" alt="">
-                            <img class="menu_img" src="/img/menu_img4-3.jpg" alt="">
-                        </div>
+                        <figure class="menu_img_wrap">
+                            <img class="menu_img" src="/img/menu_img4-1.jpg" alt="YALE 모델">
+                            <img class="menu_img" src="/img/menu_img4-2.jpg" alt="YALE 모델">
+                            <img class="menu_img" src="/img/menu_img4-3.jpg" alt="YALE 모델">
+                        </figure>
                         <div class="right_bot">
                             <p class="bot_title">믹스 매치 아이템</p>
                             <div class="bot_box_wrap">
-                                <div class="bot_box yale">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img4-1.jpg" alt="">
-                                    <p class="text">커블 니트</p>
-                                </div>
-                                <div class="bot_box yale">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img4-2.jpg" alt="">
-                                    <p class="text">멀티 파우치</p>
-                                </div>
-                                <div class="bot_box yale">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img4-3.jpg" alt="">
-                                    <p class="text">톤 로고</p>
-                                </div>
-                                <div class="bot_box yale">
-                                    <img class="menu_bot_img" src="/img/menu_bot_img4-4.jpg" alt="">
-                                    <p class="text">코튼 커블</p>
-                                </div>
+                                <figure class="bot_box yale">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img4-1.jpg" alt="커블 니트">
+                                    <figcaption class="text">커블 니트</figcaption>
+                                </figure>
+                                <figure class="bot_box yale">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img4-2.jpg" alt="멀티 파우치">
+                                    <figcaption class="text">멀티 파우치</figcaption>
+                                </figure>
+                                <figure class="bot_box yale">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img4-3.jpg" alt="톤 로고">
+                                    <figcaption class="text">톤 로고</figcaption>
+                                </figure>
+                                <figure class="bot_box yale">
+                                    <img class="menu_bot_img" src="/img/menu_bot_img4-4.jpg" alt="코튼 커블">
+                                    <figcaption class="text">코튼 커블</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- inner 영역 -->
-        <div class="inner">
+        <section class="inner">
             <div class="inner_top">
                 <span>쇼</span>
                 <span>핑</span>
@@ -228,12 +218,12 @@
                 <span>간</span>
                 <!-- 쇼핑은 언제나 즐거운 시간 -->
             </div>
-            <div class="inner_mid">
-                <img src="/img/inner_mid_img.jpg" alt="">
-            </div>
-        </div>
+            <figure class="inner_mid">
+                <img src="/img/inner_mid_img.jpg" alt="쇼핑몰 내부">
+            </figure>
+        </section>
         <!-- count 영역 -->
-        <div class="count">
+        <section class="count">
             <div class="left">
                 <h2 class="title">무엇이든 쇼핑몰<br>블랙프라이데이</h2>
                 <p class="text">
@@ -271,12 +261,12 @@
                 <div class="small_circle_line">
                     <div class="small_circle"></div>
                 </div>
-                <img class="big_img" src="/img/count_img1.jpg" alt="">
-                <img class="small_img" src="/img/count_img2.jpg" alt="">
+                <img class="big_img" src="/img/count_img1.jpg" alt="쇼핑몰 모델1">
+                <img class="small_img" src="/img/count_img2.jpg" alt="쇼핑몰 모델2">
             </div>
-        </div>
+        </section>
         <!-- notice 영역 -->
-        <div class="notice">
+        <section class="notice">
             <div class="center">
                 <div class="left">
                     <h2 class="title">
@@ -285,7 +275,7 @@
                     </h2>
                 </div>
                 <div class="right">
-                    <div class="notice_box">
+                    <article class="notice_box">
                         <div class="left">
                             <p class="event">event</p>
                             <h3 class="notice_title"><a href="/life">[new event] 블랙프라이데이 기간 최소 30% ~</a></h3>
@@ -295,10 +285,10 @@
                             <a href="/life"><i class="fa-solid fa-angles-right"></i></a>
                         </div>
                         <div class="hover_img">
-                            <img src="/img/life_img2.jpg" alt="">
+                            <img src="/img/life_img2.jpg" alt="이벤트">
                         </div>
-                    </div>
-                    <div class="notice_box">
+                    </article>
+                    <article class="notice_box">
                         <div class="left">
                             <p class="event">life</p>
                             <h3 class="notice_title"><a href="/life">[new life] ANYTHING 신규 가구 런칭 기념</a></h3>
@@ -308,10 +298,10 @@
                             <a href="/life"><i class="fa-solid fa-angles-right"></i></a>
                         </div>
                         <div class="hover_img">
-                            <img src="/img/life_img3.jpg" alt="">
+                            <img src="/img/life_img3.jpg" alt="라이프">
                         </div>
-                    </div>
-                    <div class="notice_box">
+                    </article>
+                    <article class="notice_box">
                         <div class="left">
                             <p class="event">fashion</p>
                             <h3 class="notice_title"><a href="/life">[new fashion] 끊이지 않는 스니커즈의 인기!</a></h3>
@@ -321,19 +311,19 @@
                             <a href="/life"><i class="fa-solid fa-angles-right"></i></a>
                         </div>
                         <div class="hover_img">
-                            <img src="/img/life_img1.jpg" alt="">
+                            <img src="/img/life_img1.jpg" alt="패션">
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- rolling 영역 -->
-        <div class="rolling">
+        <section class="rolling">
             <h2 class="title">스타일링</h2>
             <div class="rolling_wrap">
                 <div class="rolling_img_box">
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img1.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img1.jpg" alt="(22FW) WARM+ UP QUILTING JACKET IVORY">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[예일]</p>
@@ -343,7 +333,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img2.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img2.jpg" alt="3M 신슐레이트 퀼팅자켓 블랙 FPJ201">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[플루크]</p>
@@ -353,7 +343,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img3.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img3.jpg" alt="RDS 커버라이트 카라리스 다운 점퍼 블랙">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[커버낫]</p>
@@ -363,7 +353,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img4.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img4.jpg" alt="3M 신슐레이트 보아 플리스 무톤 자켓 베이지">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[파르티멘토]</p>
@@ -373,7 +363,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img5.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img5.jpg" alt="MA-1 레귤러 Black">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[알파 인더스트리]</p>
@@ -383,7 +373,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img6.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img6.jpg" alt="헤비 보아 플리스 무톤 자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[코드그라피]</p>
@@ -393,7 +383,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img7.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img7.jpg" alt="트위치로고 폴라플리스 집업자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[리]</p>
@@ -403,7 +393,7 @@
                         </div>
                     </div>
                     <div class="img_wrap">
-                        <img class="rolling_img" src="/img/rolling_img8.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img8.jpg" alt="투웨이 블루종 스웨이드 밴딩 점퍼 자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[플레이스 스튜디오]</p>
@@ -414,7 +404,7 @@
                     </div>
                     <!-- clone -->
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img1.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img1.jpg" alt="(22FW) WARM+ UP QUILTING JACKET IVORY">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[예일]</p>
@@ -424,7 +414,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img2.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img2.jpg" alt="3M 신슐레이트 퀼팅자켓 블랙 FPJ201">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[플루크]</p>
@@ -434,7 +424,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img3.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img3.jpg" alt="RDS 커버라이트 카라리스 다운 점퍼 블랙">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[커버낫]</p>
@@ -444,7 +434,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img4.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img4.jpg" alt="3M 신슐레이트 보아 플리스 무톤 자켓 베이지">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[파르티멘토]</p>
@@ -454,7 +444,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img5.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img5.jpg" alt="MA-1 레귤러 Black">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[알파 인더스트리]</p>
@@ -464,7 +454,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img6.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img6.jpg" alt="헤비 보아 플리스 무톤 자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[코드그라피]</p>
@@ -474,7 +464,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img7.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img7.jpg" alt="트위치로고 폴라플리스 집업자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[리]</p>
@@ -484,7 +474,7 @@
                         </div>
                     </div>
                     <div class="clone">
-                        <img class="rolling_img" src="/img/rolling_img8.jpg" alt="">
+                        <img class="rolling_img" src="/img/rolling_img8.jpg" alt="투웨이 블루종 스웨이드 밴딩 점퍼 자켓">
                         <div class="hover_bg">
                             <a href="#">
                                 <p class="comp_name">[플레이스 스튜디오]</p>
@@ -495,15 +485,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- carousel 영역 -->
-        <div class="carousel">
+        <section class="carousel">
             <h2 class="title">오늘의 패션</h2>
             <div class="center">
                 <div class="carousel_wrap">
                     <div class="carousel_box">
                         <div class="carousel_img">
-                            <img src="/img/carousel_img1.jpg" alt="">
+                            <img src="/img/carousel_img1.jpg" alt="Hoody Trench Coat SW2AR705-93">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] Hoody Trench Coat SW2AR705-93</p>
@@ -511,7 +501,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img2.jpg" alt="">
+                            <img src="/img/carousel_img2.jpg" alt="RDS 커버라이트 카라리스 다운 점퍼 블랙">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] RDS 커버라이트 카라리스 다운 점퍼 블랙</p>
@@ -519,7 +509,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img3.jpg" alt="">
+                            <img src="/img/carousel_img3.jpg" alt="COLLEGE LOGO HOODIE GREY(MG2BSMM401A)">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] COLLEGE LOGO HOODIE GREY(MG2BSMM401A)</p>
@@ -527,7 +517,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img4.jpg" alt="">
+                            <img src="/img/carousel_img4.jpg" alt="리버시블 쉐르파 집업 자켓 아이보리">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] 리버시블 쉐르파 집업 자켓 아이보리</p>
@@ -535,7 +525,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img5.jpg" alt="">
+                            <img src="/img/carousel_img5.jpg" alt="컵스카우트 카라 맨투맨 코코아 JIMT7619">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] 컵스카우트 카라 맨투맨 코코아 JIMT7619</p>
@@ -543,7 +533,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img6.jpg" alt="">
+                            <img src="/img/carousel_img6.jpg" alt="BIG LOGO HOODIE RED">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] BIG LOGO HOODIE RED</p>
@@ -551,7 +541,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img7.jpg" alt="">
+                            <img src="/img/carousel_img7.jpg" alt="Arch-Logo Hoodie Natural">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] Arch-Logo Hoodie Natural</p>
@@ -559,7 +549,7 @@
                             </div>
                         </div>
                         <div class="carousel_img">
-                            <img src="/img/carousel_img8.jpg" alt="">
+                            <img src="/img/carousel_img8.jpg" alt="피치스킨 트윌 자켓 블랙">
                             <div class="info_text">
                                 <a href="#">
                                     <p class="text">[착용] 피치스킨 트윌 자켓 블랙</p>
@@ -573,8 +563,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <!-- 하단 영역 -->
     <%- include("common/footer.ejs",{change:"black_ver", logo:"logo_white.png"}); %>
     <!-- 맨 위로 가는 태그영역 -->

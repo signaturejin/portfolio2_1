@@ -14,13 +14,13 @@
 </head>
 <body>
     <%- include("common/header.ejs",{change:"main", logo:"logo_white.png"}); %>
-    <div id="container">
-        <div class="store_map_wrap">
+    <main id="container">
+        <section class="store_map_wrap">
             <div class="center">
                 <h2 class="title">매장안내</h2>
                 <div class="store_search">
                     <div class="left">
-                        <img class="map_img" src="/img/map_img4.jpg" alt="">
+                        <img class="map_img" src="/img/map_img4.jpg" alt="매장 모델">
                     </div>
                     <div class="right">
                         <!-- 검색기능 넣기 -->
@@ -62,14 +62,14 @@
                     <% for(let i=0; i<storeData.length; i++){ %>
                     <div class="line">
                         <div class="name"><%- storeData[i].store_name %></div>
-                        <div class="addr"><%- storeData[i].store_addr %></div>
+                        <address class="addr"><%- storeData[i].store_addr %></address>
                         <div class="tell"><%- storeData[i].store_tell %></div>
                     </div>
                     <% } %>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <%- include("common/footer.ejs",{change:"black_ver", logo:"logo_white.png"}); %>
     <!-- 맨 위로 가는 태그영역 -->
     <%- include("common/go_top.ejs") %>

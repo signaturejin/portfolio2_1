@@ -32,7 +32,7 @@
                         .right_bot {
                             .bot_box_wrap {
                                 flex-wrap: wrap;
-                                .bot_box {width: 47%; margin-right: 0;}
+                                .bot_box {width: 47% !important; margin-right: 0;}
                             }
                         }
                     }
