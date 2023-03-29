@@ -280,7 +280,7 @@
                     }
                     &:nth-child(2) {
                         background-image: url("/img/slide2.jpg");
-                        .text_box {
+                        .text_box,.sub_title {
                             left: 50%; top: 45px;
                             transform: translateX(-50%);
                         }
@@ -481,6 +481,7 @@
     }
     //메인페이지 inner 영역
     .inner {
+        h2 {display: none;}
         .inner_top {
             padding: 120px 0;
             background-color: #000;
@@ -645,9 +646,7 @@
                     font-size: 80px;
                     padding: 80px 50px;
                     .text {
-                        &:nth-child(2) {
-                            padding-left: 122px;
-                        }
+                        &:nth-child(2) {padding-left: 194px;}
                     } 
                 }
             }
