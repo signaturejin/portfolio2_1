@@ -69,9 +69,10 @@
                 text-align: center;
                 border: 2px solid #ff8a28;
                 border-radius: 20px;
+                transition: all .3s;
                 &:hover {
                     background-color: #fff;
-                    border: 3px solid #ff8a28;
+                    // border: 3px solid #ff8a28;
                     color: #000;
                     font-weight: 500;
                 }
@@ -263,7 +264,8 @@
             overflow: hidden;
             position: relative;
             .view {
-                width: 100%; height: 850px;
+                width: 100%;
+                height: calc(100vh - 100px);
                 display: flex;
                 .slide_box {
                     position: absolute; left: 0; top: 0;
@@ -350,15 +352,29 @@
                 left: 35px; top: 50%;
                 transform: translateY(-50%);
                 z-index: 5;
+                
                 .slide_btn {
-                    width: 15px; height: 15px;
+                    position: relative;
+                    width: 7px; height: 7px;
                     border-radius: 50%;
-                    background-color: #000;
-                    margin-bottom: 10px;
+                    background-color: #e9e9e9;
+                    opacity: .5;
+                    margin-bottom: 45px;
+                    transition: all .5s;
                     cursor: pointer;
                     &:last-child {margin-bottom: 0;}
+                    &::after {
+                        content: ''; display: block; position: absolute; left: 50%; top: 50%;
+                        transform: translate(-50%, -50%); width: 25px; height: 25px;
+                        border: 1px solid #fff; border-radius: 50%;
+                        opacity: 0; transition: all .5s;
+                    }
                 }
-                .slide_btn.on {background-color: #fff;}
+                .slide_btn.on {
+                    background-color: #fff;
+                    opacity: 1;
+                    &::after {opacity: 1;}
+                }
             }
         }
     }
@@ -483,7 +499,7 @@
     .inner {
         h2 {display: none;}
         .inner_top {
-            padding: 120px 0;
+            padding: 100px 0;
             background-color: #000;
             color: #fff;
             text-align: center;
@@ -523,7 +539,7 @@
     //메인페이지 count 영역
     .count {
         display: flex;
-        // background-color: bisque;
+        padding: 100px 0;
         background-color: #000;
         color: #fff;
         overflow: hidden;
@@ -531,7 +547,7 @@
         .left {
             padding-left: 155px; box-sizing: border-box;
             .title {
-                padding: 200px 0 50px;
+                padding-bottom: 50px;
                 font-size: 60px; line-height: 78px;
             }
             .text {
@@ -582,7 +598,7 @@
             display: flex; justify-content: flex-end;
             align-items: center; position: relative;
             .big_circle_line {
-                position: absolute; top: 15%; right: -40%;
+                position: absolute; right: -40%;
                 width: 850px; height: 850px;
                 border: 2px dashed #ff8a28;
                 box-sizing: border-box;
@@ -597,7 +613,7 @@
                 100% {transform: rotate(-360deg);}
             }
             .small_circle_line {
-                position: absolute; top: 15%; right: -40%;
+                position: absolute; right: -40%;
                 width: 850px; height: 850px;
                 // background-color: olivedrab;
                 box-sizing: border-box;
@@ -627,7 +643,7 @@
                 width: 200px; height: 200px;
                 border-radius: 50%;
                 position: absolute;
-                right: 40px; top: 110px
+                right: 40px; top: -30px
             }
         }
     }
@@ -644,7 +660,7 @@
                 .title {
                     text-transform: uppercase;
                     font-size: 80px;
-                    padding: 80px 50px;
+                    padding: 100px 50px 0;
                     .text {
                         &:nth-child(2) {padding-left: 194px;}
                     } 
@@ -663,7 +679,7 @@
                         .hover_img {opacity: 1;}
                     }
                     .left {
-                        padding: 90px 55px;
+                        padding: 100px 55px;
                         width: 60%;
                         .event {
                             padding-bottom: 15px;
@@ -709,8 +725,9 @@
     .rolling {
         background-color: #000;
         padding-bottom: 210px;
+        padding: 100px 0;
         .title {
-            color: #fff; padding: 100px 50px 145px 50px;
+            color: #fff; margin: 0 0 145px 50px;
             font-size: 73px;
         }
         .rolling_wrap {
